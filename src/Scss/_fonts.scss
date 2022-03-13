@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../Assets/Fonts/SegoeUI-Light.eot");
+    src: local(""), url("../Assets/Fonts/SegoeUI-Light.eot?#iefix") format("embedded-opentype"),
+        url("../Assets/Fonts/SegoeUI-Light.woff") format("woff"),
+        url("../Assets/Fonts/SegoeUI-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    font-style: italic;
+    font-weight: 700;
+    src: url("../Assets/Fonts/SegoeUI-BoldItalic.eot");
+    src: local(""), url("../Assets/Fonts/SegoeUI-BoldItalic.eot?#iefix") format("embedded-opentype"),
+        url("../Assets/Fonts/SegoeUI-BoldItalic.woff") format("woff"),
+        url("../Assets/Fonts/SegoeUI-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../Assets/Fonts/SegoeUI-SemiBold.eot");
+    src: local(""), url("../Assets/Fonts/SegoeUI-SemiBold.eot?#iefix") format("embedded-opentype"),
+        url("../Assets/Fonts/SegoeUI-SemiBold.woff") format("woff"),
+        url("../Assets/Fonts/SegoeUI-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../Assets/Fonts/SegoeUI.eot");
+    src: local(""), url("../Assets/Fonts/SegoeUI.eot?#iefix") format("embedded-opentype"),
+        url("../Assets/Fonts/SegoeUI.woff") format("woff"), url("../Assets/Fonts/SegoeUI.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../Assets/Fonts/SegoeUI-Bold.eot");
+    src: local(""), url("../Assets/Fonts/SegoeUI-Bold.eot?#iefix") format("embedded-opentype"),
+        url("../Assets/Fonts/SegoeUI-Bold.woff") format("woff"),
+        url("../Assets/Fonts/SegoeUI-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    font-style: italic;
+    font-weight: 400;
+    src: url("../Assets/Fonts/SegoeUI-Italic.eot");
+    src: local(""), url("../Assets/Fonts/SegoeUI-Italic.eot?#iefix") format("embedded-opentype"),
+        url("../Assets/Fonts/SegoeUI-Italic.woff") format("woff"),
+        url("../Assets/Fonts/SegoeUI-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../Assets/Fonts/roboto-v29-latin_cyrillic-900.eot');
+    src: local(''),
+         url('../Assets/Fonts/roboto-v29-latin_cyrillic-900.eot?#iefix') format('embedded-opentype'),
+         url('../Assets/Fonts/roboto-v29-latin_cyrillic-900.woff2') format('woff2'),
+         url('../Assets/Fonts/roboto-v29-latin_cyrillic-900.woff') format('woff'),
+         url('../Assets/Fonts/roboto-v29-latin_cyrillic-900.ttf') format('truetype'),
+         url('../Assets/Fonts/roboto-v29-latin_cyrillic-900.svg#Roboto') format('svg');
+  }
