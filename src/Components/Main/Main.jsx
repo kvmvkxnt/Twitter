@@ -10,7 +10,7 @@ function Main() {
     const ctxToken = React.useContext(TokenContext);
     return (
         <main className={`main ${ctx.theme === 'dark' ? 'main--dark' : ''}`}>
-            {!ctxToken.token ? <Login/> : <Content/>}
+            {!ctxToken.token || ctxToken.token === 'null' ? <Login/> : <Content/>}
         </main>
     )
 }

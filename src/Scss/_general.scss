@@ -19,10 +19,10 @@ html, body, #root {
     transition: 0.4s;
 }
 
-.body--dark {
-    background-color: black;
-    transition: 0.4s;
-}
+// .body--dark {
+//     background-color: black;
+//     transition: 0.4s;
+// }
 
 #root {
     display: flex;
@@ -55,13 +55,12 @@ img {
 main, .main {
     flex-grow: 1;
     transition: 0.4s;
-    width: 100%;
 }
 
-.main--dark {
-    background-color: black;
-    transition: 0.4s;
-}
+// .main--dark {
+//     background-color: black;
+//     transition: 0.4s;
+// }
 
 .container {
     max-width: 1600px;

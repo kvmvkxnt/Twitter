@@ -70,8 +70,8 @@ function Login() {
 
                             <h1 className="login__heading">{languages[ctxLang.lang].main.login.heading}</h1>
 
-                            <input type="text" className='login__input' id='login-input' defaultValue='eve.holt@reqres.in' placeholder={languages[ctxLang.lang].main.login.placeholder1} />
-                            <input type="password" className='login__input' id='pass-input' defaultValue='cityslicka' placeholder={languages[ctxLang.lang].main.login.placeholder2} />
+                            <input type="text" className='login__input' id='login-input' defaultValue='eve.@reqres.in' placeholder={languages[ctxLang.lang].main.login.placeholder1} />
+                            <input type="password" className='login__input' id='pass-input' defaultValue='s' placeholder={languages[ctxLang.lang].main.login.placeholder2} />
 
                             <input type="submit" value={languages[ctxLang.lang].main.login.button} className='login__button' />
 
