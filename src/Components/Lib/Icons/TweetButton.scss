@@ -1,0 +1,13 @@
+.feed__button {
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #e3e1e1;
+        transition: 0.3s;
+    }
+}

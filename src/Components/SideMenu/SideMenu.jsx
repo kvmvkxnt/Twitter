@@ -3,6 +3,7 @@ import './SideMenu.scss';
 import Twitter from '../Lib/Icons/Twitter';
 import MenuIcons from '../Lib/Icons/MenuIcons';
 import user1 from '../../Assets/Images/Ellipse3.png';
+import user2 from '../../Assets/Images/Ellipse3@2x.png';
 
 function SideMenu() {
     return (
@@ -66,9 +67,15 @@ function SideMenu() {
 
                 <div className="side-menu__profile">
                     <a href="#link2" className="side-menu__profile__link">
-                        <img src={user1} alt="User1" />
+                        <img src={user1} alt="User1" srcSet={`${user1} 1x, ${user2} 2x`}/>
                     </a>
-                    
+                    <div className="side-menu__profile__description">
+                        <a href='#link' className="side-menu__profile__name">Bobur</a>
+                        <a href='#link' className="side-menu__profile__username">@bobur_mavlonov</a>
+                    </div>
+                    <button className="side-menu__profile__button">
+                        &bull;&bull;&bull;
+                    </button>
                 </div>
             </div>
         </div>

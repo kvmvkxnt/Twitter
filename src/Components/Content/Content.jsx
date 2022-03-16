@@ -1,6 +1,7 @@
 import React from 'react';
-// import {Context} from '../../Context/Theme/Theme';
+import './Content.scss';
 import SideMenu from '../SideMenu/SideMenu';
+import Feed from '../Feed/Feed';
 
 function Content(){
     // const ctx = React.useContext(Context);
@@ -9,6 +10,7 @@ function Content(){
             <div className="container">
                 <div className="content__inner">
                     <SideMenu/>
+                    <Feed/>
                 </div>
             </div>
         </div>
