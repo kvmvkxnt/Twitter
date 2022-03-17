@@ -68,3 +68,9 @@ main, .main {
     color: white;
     transition: color 0.4s, background-color 0.4s;
 }
+
+@media only screen and (max-width: 393px) {
+    .body {
+        font-size: 12px;
+    }
+}
