@@ -1,4 +1,4 @@
-import '../../../bootstrap-icons/font/bootstrap-icons.scss';
+import 'bootstrap-icons/font/bootstrap-icons.scss';
 import PropTypes from 'prop-types';
 
 function MenuIcons({icon, active}) {
