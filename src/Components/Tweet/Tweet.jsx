@@ -2,7 +2,7 @@ import React from 'react';
 import './Tweet.scss';
 import TweetIcons from '../Lib/Icons/TweetIcons';
 
-function Tweet({ className, name, username, time, tweet, imageSrc1, imageSrc2, imageSrc3, imageSrc4 }) {
+function Tweet({ className, name, username, time, tweet, imageSrc1, imageSrc2, imageSrc3, imageSrc4, active1, active2 }) {
     return (
         <li className={`tweet__item ${className}__item`}>
             <a href="#link" className={`tweet__user ${className}__user`}>
@@ -23,11 +23,11 @@ function Tweet({ className, name, username, time, tweet, imageSrc1, imageSrc2, i
                         <span className={`tweet__tweet-info__number ${className}__tweet-info__number`}>1000</span>
                     </button>
                     <button className={`tweet__tweet-info__button ${className}__tweet-info__button`}>
-                        <TweetIcons type='retweet' />
+                        <TweetIcons type='retweet' active={active1}/>
                         <span className={`tweet__tweet-info__number ${className}__tweet-info__number`}>1000</span>
                     </button>
                     <button className={`tweet__tweet-info__button ${className}__tweet-info__button`}>
-                        <TweetIcons type='like' />
+                        <TweetIcons type='like' active={active2}/>
                         <span className={`tweet__tweet-info__number ${className}__tweet-info__number`}>1000</span>
                     </button>
                     <button className={`tweet__tweet-info__button ${className}__tweet-info__button`}>

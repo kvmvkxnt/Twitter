@@ -58,8 +58,8 @@ function Feed() {
                 </div>
                 <ul className="feed__list">
                     <Tweet className='feed' name='Designta' username='@inner' time='25m' imageSrc1={user1_1} imageSrc2={user1_2} tweet={languages[ctxLang.lang].main.feed.tweets.tweet1}/>
-                    <Tweet className='feed' name='cloutexhibition' username='@cloutexhibition' time='22m' imageSrc1={user2_1} imageSrc2={user2_2} tweet={languages[ctxLang.lang].main.feed.tweets.tweet2}/>
-                    <Tweet className='feed' name='CreativePhoto' username='@RajLahoti' time='1h' imageSrc1={user3_1} imageSrc2={user3_2} imageSrc3={user3_3} imageSrc4={user3_4} tweet={languages[ctxLang.lang].main.feed.tweets.tweet3}/>
+                    <Tweet className='feed' active2={true} name='cloutexhibition' username='@cloutexhibition' time='22m' imageSrc1={user2_1} imageSrc2={user2_2} tweet={languages[ctxLang.lang].main.feed.tweets.tweet2}/>
+                    <Tweet className='feed' active1={true} name='CreativePhoto' username='@RajLahoti' time='1h' imageSrc1={user3_1} imageSrc2={user3_2} imageSrc3={user3_3} imageSrc4={user3_4} tweet={languages[ctxLang.lang].main.feed.tweets.tweet3}/>
                 </ul>
             </div>
         </div>
