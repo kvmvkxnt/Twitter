@@ -15,6 +15,67 @@ const languages = {
 
                 opt1: 'Light',
                 opt2: 'Dark'
+            },
+            
+            side_menu: {
+                logo_alt: 'Twitter Logo',
+
+                home: 'Home',
+                explore: 'Explore',
+                notify: 'Notifications',
+                chat: 'Messages',
+                books: 'Bookmarks',
+                list: 'Lists',
+                profile: 'Profile',
+                more: 'More',
+
+                tweet: 'Tweet',
+            },
+
+            feed: {
+                heading: 'Home',
+
+                form: {
+                    input: "What's happening",
+                    button: 'Tweet',
+                },
+
+                tweets: {
+                    tweet1: 'Are you bored of your female-male confrontation on Twitter?',
+                    tweet2: "This year's YPIP season is coming to an end. One is happy to see students and alumni grow during mentoring.",
+                    tweet3: 'On lunch... Sorry',
+                }
+            },
+
+            recs: {
+                input: 'Search Twitter',
+
+                trends: {
+                    heading: 'Trends for you',
+
+                    where: 'Trending in Germany',
+                    name: 'Revolution',
+                    amount: '50.4K tweets',
+
+                    more: 'Show more',
+                },
+
+                subs: {
+                    heading: 'You might like',
+
+                    button: 'Follow',
+
+                    more: 'Show more',
+                },
+
+                copyrights: {
+                    terms: 'Terms of Service',
+                    privacy: 'Privacy Policy',
+                    cookie: 'Cookie Policy',
+                    imprint: 'Imprint',
+                    ads: 'Ads Info',
+                    more: 'More',
+                }
             }
         }
     },
@@ -35,6 +96,67 @@ const languages = {
 
                 opt1: 'Светлый',
                 opt2: 'Тёмный'
+            },
+
+            side_menu: {
+                logo_alt: 'Логотип Твиттер',
+
+                home: 'Главная',
+                explore: 'Искать',
+                notify: 'Уведомления',
+                chat: 'Сообщения',
+                books: 'Закладки',
+                list: 'Листы',
+                profile: 'Профиль',
+                more: 'Больше',
+
+                tweet: 'Твитнуть',
+            },
+
+            feed: {
+                heading: 'Главная',
+
+                form: {
+                    input: "Что происходит",
+                    button: 'Твитнуть',
+                },
+
+                tweets: {
+                    tweet1: 'Вам не надоело противостояние между мужчиной и женщиной в Твиттере?',
+                    tweet2: "Сезон YPIP в этом году подходит к концу. Приятно видеть, как студенты и выпускники растут во время наставничества.",
+                    tweet3: 'На обеде... Простите',
+                }
+            },
+
+            recs: {
+                input: 'Искать Твиттер',
+
+                trends: {
+                    heading: 'Тренды для вас',
+
+                    where: 'Тренд в Германии',
+                    name: 'Революция',
+                    amount: '50.K твитов',
+
+                    more: 'Больше',
+                },
+
+                subs: {
+                    heading: 'Вам могут понравиться',
+
+                    button: 'Подписаться',
+
+                    more: 'Больше',
+                },
+
+                copyrights: {
+                    terms: 'Условия использования',
+                    privacy: 'Политика конфиденциальности',
+                    cookie: 'Политика Cookie',
+                    imprint: 'Выходные данные',
+                    ads: 'Информация о рекламе',
+                    more: 'Больше',
+                }
             }
         }
     },
@@ -55,6 +177,67 @@ const languages = {
 
                 opt1: 'Yoriq',
                 opt2: 'Qorong\'i'
+            },
+
+            side_menu: {
+                logo_alt: 'Twitter logosi',
+
+                home: 'Uy',
+                explore: 'Qidirish',
+                notify: 'Bildirishnomalar',
+                chat: 'Xabarlar',
+                books: 'Xatcho‘plar',
+                list: "Ro'yxatlar",
+                profile: 'Profile',
+                more: 'Profil',
+
+                tweet: 'Twitlash',
+            },
+
+            feed: {
+                heading: 'Uy',
+
+                form: {
+                    input: "Nima bovotti brachka",
+                    button: 'Twitlash',
+                },
+
+                tweets: {
+                    tweet1: "Twitterdagi ayol-erkak qarama-qarshiliginglardan o'zinglar zerikmadinglarmi?",
+                    tweet2: "YPIP dasturining bu yilgi sezoni ham o’z nihoyasiga yetmoqda. Mentorlik davomida talaba va yangi bitiruvchilarni o’sayotganini ko’rib hursand bo’ladi odam.",
+                    tweet3: 'Обетда..... Кечиринглар',
+                }
+            },
+
+            recs: {
+                input: 'Twitterni Izlash',
+
+                trends: {
+                    heading: 'Siz uchun trendlar',
+
+                    where: 'Germaniyadagi Trend',
+                    name: 'Inqilob',
+                    amount: '50.4K twitlar',
+
+                    more: "Ko'proq",
+                },
+
+                subs: {
+                    heading: 'Sizga yoqishi mumkin',
+
+                    button: 'Kuzatish',
+
+                    more: "Ko'proq",
+                },
+
+                copyrights: {
+                    terms: "Xizmat ko'rsatish shartlari",
+                    privacy: 'Maxfiylik siyosati',
+                    cookie: 'Cookie siyosati',
+                    imprint: 'Imprint',
+                    ads: "E'lonlar haqida ma'lumot",
+                    more: "Ko'proq",
+                }
             }
         }
     }

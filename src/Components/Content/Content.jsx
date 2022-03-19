@@ -2,6 +2,7 @@ import React from 'react';
 import './Content.scss';
 import SideMenu from '../SideMenu/SideMenu';
 import Feed from '../Feed/Feed';
+import Recomendations from '../Recomendations/Recomendations';
 
 function Content(){
     // const ctx = React.useContext(Context);
@@ -11,6 +12,7 @@ function Content(){
                 <div className="content__inner">
                     <SideMenu/>
                     <Feed/>
+                    <Recomendations/>
                 </div>
             </div>
         </div>

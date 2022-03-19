@@ -3,6 +3,7 @@
         display: block;
         min-width: 276px;
         height: 1px;
+        transition: background-color 0.4s, color 0.4s;
 
         &__inner {
             display: flex;
@@ -13,6 +14,7 @@
             max-height: max-content;
             height: 100%;
             padding: 0 10px;
+            transition: background-color 0.4s;
 
             .side-menu__logo-link {
                 margin-top: 20px;
@@ -32,6 +34,7 @@
                         background-color: transparent;
                         font-weight: 600;
                         cursor: pointer;
+                        transition: color 0.4s;
 
                         &.active {
                             font-weight: 700;
@@ -39,6 +42,7 @@
 
                         .side-menu__desc {
                             margin-left: 20px;
+                            transition: color 0.4s;
 
                             &::after {
                                 content: '';
@@ -46,7 +50,7 @@
                                 height: 1px;
                                 display: block;
                                 background-color: black;
-                                transition: 0.3s; 
+                                transition: width 0.3s, background-color 0.4s;
                             }
 
                             &:hover::after {
@@ -85,6 +89,11 @@
                 margin-top: auto;
                 margin-bottom: 30px;
 
+                &__link {
+                    max-width: 50px;
+                    width: 100%;
+                }
+
                 &__description {
                     margin-left: 10px;
 
@@ -94,7 +103,7 @@
                         line-height: 21px;
                         display: block;
                         text-decoration: none;
-                        color: #000000;
+                        transition: color 0.4s;
                     }
 
                     .side-menu__profile__username {
@@ -104,16 +113,16 @@
                         opacity: 0.6;
                         display: block;
                         text-decoration: none;
-                        color: #000000;
+                        transition: color 0.4s;
                     }
                 }
 
                 &__button {
                     margin: 0;
-                    margin-left: 40px;
                     border: none;
                     padding: 0;
                     background-color: transparent;
+                    margin-left: 20px;
                     cursor: pointer;
                     transition: opacity 0.4s;
 
@@ -122,6 +131,61 @@
                         transition: opacity 0.4s;
                     }
                 }
+            }
+        }
+    }
+}
+
+.body--dark {
+    .side-menu {
+        background-color: black;
+        color: white;
+        transition: background-color 0.4s, color 0.4s;
+
+        &__inner {
+            background-color: black;
+            transition: background-color 0.4s;
+
+            .side-menu__desc {
+                color: white;
+                transition: color 0.4s;
+            }
+
+            .side-menu__list .side-menu__item .side-menu__button .side-menu__desc::after {
+                background-color: white;
+                transition: width 0.3s, background-color 0.4s;
+            }
+
+            .side-menu__button {
+                color: white;
+                transition: color 0.4s;
+            }
+
+            .side-menu__profile__name {
+                color: white;
+                transition: color 0.4s;
+            }
+
+            .side-menu__profile__username {
+                color: white;
+                transition: color 0.4s;
+            }
+
+            .side-menu__profile__button {
+                color: white;
+                transition: color 0.4s;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1162px) {
+    .body {
+        .side-menu {
+            min-width: 200px;
+            &__inner {
+                max-width: 200px;
+                width: 100%;
             }
         }
     }

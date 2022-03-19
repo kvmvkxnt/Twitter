@@ -2,6 +2,9 @@
     padding: 10px 25px 20px 25px;
     display: flex;
     border-bottom: 1px solid #D8D8D8;
+    // justify-content: space-between;
+    width: 100%;
+    transition: color 0.4s, border-bottom 0.4s;
 
     .tweet__user {
         max-width: 60px;
@@ -9,27 +12,41 @@
     }
 
     .tweet__tweet-info {
+        margin-left: 15px;
+
         &__user {
             font-family: 'Segoe UI';
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
             line-height: 24px;
-            color: rgba(0, 0, 0, 0.6);
+            color: rgba(0, 0, 0, 1);
             text-decoration: none;
             margin-bottom: 5px;
+            transition: color 0.4s;
 
             .name {
                 font-weight: 700;
                 font-size: 20px;
                 line-height: 27px;
-                color: #000000;
             }
+        }
+
+        &__tweet {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 15px;
+        }
+
+        &__img {
+            border-radius: 20px;
+            margin-bottom: 22px;
         }
 
         &__buttons {
             display: flex;
-            width: 100%;
+            justify-content: space-between;
 
             .tweet__tweet-info__button {
                 border: none;
@@ -42,9 +59,24 @@
                 cursor: pointer;
                 transition: background-color 0.3s;
 
+                svg {
+                    path {
+                        transition: fill 0.4s;
+                    }
+                }
+
                 &:hover {
                     background-color: #e3e1e1;
                     transition: background-color 0.3s;
+                }
+
+                .tweet__tweet-info__number {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 21px;
+                    color: #536471;                    
+                    margin-left: 5px;
+                    transition: color 0.4s, opacity 0.4s;
                 }
             }
         }
@@ -55,12 +87,58 @@
         border: none;
         cursor: pointer;
         align-self: flex-start;
+        margin-left: 10px;
         opacity: 1;
-        transition: opacity 0.3s;
+        transition: opacity 0.3s, color 0.4s;
 
         &:hover {
             opacity: 0.4;
             transition: opacity 0.3s;
+        }
+    }
+}
+
+.body--dark {
+    .tweet__item {
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        transition: color 0.4s, border-bottom 0.4s;
+
+        .tweet__button {
+            color: white;
+            transition: opacity 0.3s, color 0.4s;
+        }
+
+        .tweet__tweet-info__user {
+            color: white;
+            transition: color 0.4s;
+        }
+
+        .tweet__tweet-info__button {
+            &:hover {
+                svg {
+                    path {
+                        fill: black;
+                    }
+                }
+
+                span {
+                    color: black;
+                }
+            }
+
+            .tweet__tweet-info__number {
+                color: white;
+                opacity: 0.8;
+                transition: color 0.4s, opacity 0.4s;
+            }
+
+            svg {
+                path {
+                    fill: white;
+                    transition: fill 0.4s;
+                }
+            }
         }
     }
 }

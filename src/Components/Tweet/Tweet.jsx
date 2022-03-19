@@ -1,32 +1,34 @@
 import React from 'react';
 import './Tweet.scss';
-import user1 from '../../Assets/Images/Ellipse3.png';
-import user2 from '../../Assets/Images/Ellipse3@2x.png';
 import TweetIcons from '../Lib/Icons/TweetIcons';
 
-function Tweet({ className, name, username, time, tweet }) {
+function Tweet({ className, name, username, time, tweet, imageSrc1, imageSrc2, imageSrc3, imageSrc4 }) {
     return (
         <li className={`tweet__item ${className}__item`}>
             <a href="#link" className={`tweet__user ${className}__user`}>
-                <img src={user1} srcSet={`${user1} 1x, ${user2} 2x`} alt="User" />
+                <img src={imageSrc1} srcSet={`${imageSrc1} 1x, ${imageSrc2} 2x`} alt="User" />
             </a>
 
             <div className={`tweet__tweet-info ${className}__tweet-info`}>
-                <a href='#link3' className={`tweet__tweet-info__user ${className}__tweet-info__user`}><span className='name'>{name}cloutexhibition</span> {username}@RajLahoti &bull; {time}25m</a>
+                <a href='#link3' className={`tweet__tweet-info__user ${className}__tweet-info__user`}><span className='name'>{name}</span> {username} &bull; {time}</a>
                 <p className={`tweet__tweet-info__tweet ${className}__tweet-info__tweet`}>
                     {tweet}
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quas quaerat nam ratione id accusamus, odio iusto, soluta repellendus dolor in doloribus iure quos aliquam? Nemo, quos molestiae? Cupiditate, nulla.
                 </p>
+
+                {!imageSrc3 ? null : <img src={imageSrc3} srcSet={`${imageSrc3} 1x, ${imageSrc4} 2x`} alt="some" className={`tweet__tweet-info__img ${className}__tweet-info__img`}/>}
+
                 <div className={`tweet__tweet-info__buttons ${className}__tweet-info__buttons`}>
                     <button className={`tweet__tweet-info__button ${className}__tweet-info__button`}>
                         <TweetIcons type='comments' />
-                        5
+                        <span className={`tweet__tweet-info__number ${className}__tweet-info__number`}>1000</span>
                     </button>
                     <button className={`tweet__tweet-info__button ${className}__tweet-info__button`}>
                         <TweetIcons type='retweet' />
+                        <span className={`tweet__tweet-info__number ${className}__tweet-info__number`}>1000</span>
                     </button>
                     <button className={`tweet__tweet-info__button ${className}__tweet-info__button`}>
                         <TweetIcons type='like' />
+                        <span className={`tweet__tweet-info__number ${className}__tweet-info__number`}>1000</span>
                     </button>
                     <button className={`tweet__tweet-info__button ${className}__tweet-info__button`}>
                         <TweetIcons type='share' />

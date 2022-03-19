@@ -2,10 +2,12 @@
     .feed {
         max-width: 909px;
         width: 100%;
+        transition: color 0.4s;
 
         &__inner {
             border-left: 1px solid #D8D8D8;
             border-right: 1px solid #D8D8D8;
+            transition: border-left 0.4s, border-right 0.4s;
 
             .feed__heading {
                 display: flex;
@@ -13,6 +15,7 @@
                 padding: 20px 25px;
                 align-items: center;
                 border-bottom: 1px solid #D8D8D8;
+                transition: border-bottom 0.4s;
 
                 .feed__title {
                     font-weight: 700;
@@ -20,10 +23,23 @@
                     line-height: 32px;
                 }
 
+                .feed__select {
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    padding: 10px 0px;
+                    border-radius: 6px;
+                    transition: background-color 0.4s, color 0.4s, border 0.4s;
+                }
+
                 .feed__button {
                     padding: 0;
                     border: none;
                     background-color: transparent;
+
+                    svg {
+                        path {
+                            transition: fill 0.4s;
+                        }
+                    }
                 }
             }
 
@@ -31,6 +47,7 @@
                 display: flex;
                 padding: 5px 20px;
                 border-bottom: 1px solid #D8D8D8;
+                transition: border-bottom 0.4s;
 
                 .feed__user {
                     width: 60px;
@@ -52,6 +69,7 @@
                         margin-bottom: 51px;
                         margin-top: 5px;
                         resize: vertical;
+                        transition: color 0.4s;
                     }
 
                     .feed__submit {
@@ -80,6 +98,50 @@
                 padding: 0;
                 margin: 0;
                 list-style-type: none;
+            }
+        }
+    }
+}
+
+.body--dark {
+    .feed {
+        color: white;
+        transition: color 0.4s;
+
+        .feed__inner {
+            border-left: 1px solid rgba(255, 255, 255, 0.4);
+            border-right: 1px solid rgba(255, 255, 255, 0.4);
+            transition: border-left 0.4s, border-right 0.4s;
+
+            .feed__tweet {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+                transition: border-bottom 0.4s;
+            }
+
+            .feed__input {
+                color: white;
+                transition: color 0.4s;
+            }
+
+            .feed__heading {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+                transition: border-bottom 0.4s;
+
+                .feed__select {
+                    background-color: black;
+                    border: 1px solid rgba(255, 255, 255, 0.8);
+                    color: white;
+                    transition: background-color 0.4s, border 0.4s, color 0.4s;
+                }
+
+                .feed__button {
+                    svg {
+                        path {
+                            fill: white;
+                            transition: fill 0.4s;
+                        }
+                    }
+                }
             }
         }
     }
