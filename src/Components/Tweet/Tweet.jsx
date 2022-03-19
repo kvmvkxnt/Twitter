@@ -1,6 +1,8 @@
 import React from 'react';
 import './Tweet.scss';
 import TweetIcons from '../Lib/Icons/TweetIcons';
+import PropTypes from 'prop-types';
+import userImage from '../../Assets/Images/noUserImage.webp';
 
 function Tweet({ className, name, username, time, tweet, imageSrc1, imageSrc2, imageSrc3, imageSrc4, active1, active2 }) {
     return (
@@ -44,6 +46,26 @@ function Tweet({ className, name, username, time, tweet, imageSrc1, imageSrc2, i
             </button>
         </li>
     )
+}
+
+Tweet.propTypes = {
+    className: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
+    imageSrc1: PropTypes.string,
+    imageSrc2: PropTypes.string,
+    imageSrc3: PropTypes.string,
+    imageSrc4: PropTypes.string,
+    active1: PropTypes.bool,
+    active2: PropTypes.bool,
+}
+
+Tweet.defaultProps = {
+    imageSrc1: userImage,
+    imageSrc2: userImage,
+    active1: false,
+    acitve2: false,
 }
 
 export default Tweet;

@@ -5,7 +5,6 @@ import Feed from '../Feed/Feed';
 import Recomendations from '../Recomendations/Recomendations';
 
 function Content(){
-    // const ctx = React.useContext(Context);
     return (
         <div className='content'>
             <div className="container">

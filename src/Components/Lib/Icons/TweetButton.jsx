@@ -1,5 +1,6 @@
 import React from 'react';
 import './TweetButton.scss';
+import PropTypes from 'prop-types';
 
 function TweetButton({ type }) {
     if (type === 'image') {
@@ -79,6 +80,10 @@ function TweetButton({ type }) {
         </button>
         )
     }
+}
+
+TweetButton.propTypes = {
+    type: PropTypes.string.isRequired,
 }
 
 export default TweetButton;

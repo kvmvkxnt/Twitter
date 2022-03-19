@@ -4,17 +4,20 @@ import Main from './Components/Main/Main';
 import { Provider as LangProvider } from './Context/Language/Language';
 import { Provider as ThemeProvider } from './Context/Theme/Theme';
 import { Provider as TokenProvider } from './Context/Token/Token';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
     return (
         <>
-            <TokenProvider>
-                <ThemeProvider>
-                    <LangProvider>
-                        <Main />
-                    </LangProvider>
-                </ThemeProvider>
-            </TokenProvider>
+            <BrowserRouter>
+                <TokenProvider>
+                    <ThemeProvider>
+                        <LangProvider>
+                            <Main />
+                        </LangProvider>
+                    </ThemeProvider>
+                </TokenProvider>
+            </BrowserRouter>
         </>
     );
 }

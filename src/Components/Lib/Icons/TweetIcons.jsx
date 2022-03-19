@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function TweetIcons({ type, active }) {
     if (type === 'comments') {
@@ -69,6 +70,15 @@ function TweetIcons({ type, active }) {
             </svg>
         )
     }
+}
+
+TweetIcons.propTypes = {
+    type: PropTypes.string.isRequired,
+    active: PropTypes.bool,
+}
+
+TweetIcons.defaultProps = {
+    active: false,
 }
 
 export default TweetIcons;

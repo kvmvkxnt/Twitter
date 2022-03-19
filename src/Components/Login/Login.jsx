@@ -6,15 +6,13 @@ import { Context as LangContext } from '../../Context/Language/Language';
 import { Context as ThemeContext } from '../../Context/Theme/Theme';
 import { findElement } from '../../utils';
 import { Context as TokenContext } from '../../Context/Token/Token';
+// import {useNavigate} from 'react-router-dom';
 
 function Login() {
     const ctxLang = React.useContext(LangContext);
     const ctxTheme = React.useContext(ThemeContext);
     const ctxToken = React.useContext(TokenContext);
-
-    React.useEffect(() => {
-        window.localStorage.removeItem('token')
-    }, [])
+    // let navigate = useNavigate();
 
     const handleSubmit = evt => {
         evt.preventDefault();
