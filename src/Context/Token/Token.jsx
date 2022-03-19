@@ -4,7 +4,11 @@ const Context = React.createContext();
 function Provider({ children }) {
     const [token, setToken] = React.useState(window.localStorage.getItem('token') || null);
     React.useEffect(() => {
-        window.localStorage.setItem('token', token);
+        if (token) {
+            window.localStorage.setItem('token', token);
+        } else {
+            return;
+        }
     }, [token]);
     return <Context.Provider value={{ token, setToken }}>{children}</Context.Provider>
 }
