@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 import profile1 from '../../Assets/Images/profile.png';
 import profile2 from '../../Assets/Images/profile@2x.png';
 import nouser from '../../Assets/Images/noUserImage.webp';
-import user1 from '../../Assets/Images/profile-rounded.png';
-import user2 from '../../Assets/Images/profile-rounded@2x.png';
+// import user1 from '../../Assets/Images/profile-rounded.png';
+// import user2 from '../../Assets/Images/profile-rounded@2x.png';
 import { Context as ThemeContext } from '../../Context/Theme/Theme';
 import { Context as LangContext } from '../../Context/Language/Language';
 import Stars from '../Lib/Icons/Stars';
 import Tweet from '../Tweet/Tweet';
-import tweet1 from '../../Assets/Images/usertweet.png';
-import tweet2 from '../../Assets/Images/usertweet@2x.png';
+// import tweet1 from '../../Assets/Images/usertweet.png';
+// import tweet2 from '../../Assets/Images/usertweet@2x.png';
 import languages from '../../Localization/languages';
 
 function Profile({ username, name, imgSrc, tweets }) {
