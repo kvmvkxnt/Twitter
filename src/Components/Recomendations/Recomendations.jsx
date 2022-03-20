@@ -1,5 +1,6 @@
 import './Recomendations.scss';
 import React from 'react';
+import PropTypes from 'prop-types';
 import user1_1 from '../../Assets/Images/mushtariy.png';
 import user1_2 from '../../Assets/Images/mushtariy@2x.png';
 import user2_1 from '../../Assets/Images/shuhrat.png';
@@ -19,7 +20,7 @@ import tweet5_2 from '../../Assets/Images/tweet5@2x.png';
 import tweet6_1 from '../../Assets/Images/tweet6.png';
 import tweet6_2 from '../../Assets/Images/tweet6@2x.png';
 
-function Recomendations() {
+function Recomendations({ active }) {
     const ctxLang = React.useContext(LangContext);
 
     return (
@@ -40,7 +41,7 @@ function Recomendations() {
                     <input type="text" className="recs__search__input" placeholder={languages[ctxLang.lang].main.recs.input} />
                 </form>
 
-                <ul className="recs__tweets">
+                {active ? <ul className="recs__tweets">
                     <li className="recs__tweets__item">
                         <img src={tweet1_1} srcSet={`${tweet1_1} 1x, ${tweet1_2} 2x`} alt="something" />
                     </li>
@@ -59,7 +60,7 @@ function Recomendations() {
                     <li className="recs__tweets__item">
                         <img src={tweet5_1} srcSet={`${tweet6_1} 1x, ${tweet6_2} 2x`} alt="something" />
                     </li>
-                </ul>
+                </ul> : null}
 
                 <div className="recs__trends">
                     <div className="recs__trends__heading">
@@ -165,6 +166,14 @@ function Recomendations() {
             </div>
         </div>
     )
+}
+
+Recomendations.propTypes = {
+    active: PropTypes.bool,
+}
+
+Recomendations.defaultProps = {
+    active: false,
 }
 
 export default Recomendations;

@@ -7,7 +7,7 @@ function Provider({ children }) {
         if (token) {
             window.localStorage.setItem('token', token);
         } else {
-            return;
+            window.localStorage.removeItem('token');
         }
     }, [token]);
     return <Context.Provider value={{ token, setToken }}>{children}</Context.Provider>

@@ -30,6 +30,7 @@ const languages = {
                 more: 'More',
 
                 tweet: 'Tweet',
+                out: 'Log out',
             },
 
             profile: {
@@ -133,6 +134,7 @@ const languages = {
                 more: 'Больше',
 
                 tweet: 'Твитнуть',
+                out: 'Выйти',
             },
 
             profile: {
@@ -232,10 +234,11 @@ const languages = {
                 chat: 'Xabarlar',
                 books: 'Xatcho‘plar',
                 list: "Ro'yxatlar",
-                profile: 'Profile',
-                more: 'Profil',
+                profile: 'Profil',
+                more: "Ko'proq",
 
                 tweet: 'Twitlash',
+                out: 'Chiqish',
             },
 
             profile: {

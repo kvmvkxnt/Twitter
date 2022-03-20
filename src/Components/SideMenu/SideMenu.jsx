@@ -5,15 +5,17 @@ import MenuIcons from '../Lib/Icons/MenuIcons';
 import languages from '../../Localization/languages';
 import user1 from '../../Assets/Images/Ellipse3.png';
 import user2 from '../../Assets/Images/Ellipse3@2x.png';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Context as LangContext } from '../../Context/Language/Language';
+import { Context as TokenContext } from '../../Context/Token/Token';
 
 function SideMenu() {
     const ctxLang = React.useContext(LangContext);
+    const ctxToken = React.useContext(TokenContext);
     return (
         <div className='side-menu'>
             <div className="side-menu__inner">
-                <a href="#link" className='side-menu__logo-link'><Twitter width={40} height={30} className={'side-menu__logo'} alt={languages[ctxLang.lang].main.side_menu.logo_alt} /></a>
+                <Link to="/" className='side-menu__logo-link'><Twitter width={40} height={30} className={'side-menu__logo'} alt={languages[ctxLang.lang].main.side_menu.logo_alt} /></Link>
 
                 <ul className="side-menu__list">
                     <li className="side-menu__item">
@@ -77,7 +79,12 @@ function SideMenu() {
                         <a href='#link' className="side-menu__profile__name">Bobur</a>
                         <a href='#link' className="side-menu__profile__username">@bobur_mavlonov</a>
                     </div>
-                    <button className="side-menu__profile__button">
+                    <button className="side-menu__profile__out" onClick={() => {
+                        ctxToken.setToken(null);
+                    }}>{languages[ctxLang.lang].main.side_menu.out}</button>
+                    <button className="side-menu__profile__button" onClick={(evt) => {
+                        evt.target.previousElementSibling.classList.toggle('active');
+                    }}>
                         &bull;&bull;&bull;
                     </button>
                 </div>

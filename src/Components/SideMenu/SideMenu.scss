@@ -101,6 +101,7 @@
                 align-items: center;
                 margin-top: auto;
                 margin-bottom: 30px;
+                position: relative;
 
                 &__link {
                     max-width: 50px;
@@ -129,6 +130,32 @@
                         text-decoration: none;
                         color: black;
                         transition: color 0.4s;
+                    }
+                }
+
+                &__out {
+                    position: absolute;
+                    border: 1px solid black;
+                    background-color: white;
+                    padding: 10px 15px;
+                    border-radius: 27.5px;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    transform: translateY(-100%);
+                    max-width: fit-content;
+                    cursor: pointer;
+                    display: none;
+                    transition: color 0.4s, background-color 0.4s, border 0.4s;
+
+                    &:hover {
+                        background-color: black;
+                        color: white;
+                        transition: color 0.4s, background-color 0.4s;
+                    }
+
+                    &.active {
+                        display: block;
                     }
                 }
 
@@ -189,6 +216,18 @@
             .side-menu__profile__button {
                 color: white;
                 transition: color 0.4s;
+            }
+
+            .side-menu__profile__out {
+                background-color: black;
+                color: white;
+                border: 1px solid white;
+                transition: background-color 0.4s, color 0.4s, border 0.4s;
+
+                &:hover {
+                    background-color: white;
+                    color: black;
+                }
             }
         }
     }

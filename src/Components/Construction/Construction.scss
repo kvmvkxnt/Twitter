@@ -1,0 +1,32 @@
+.content {
+    color: black;
+    height: 100%;
+}
+
+.content--dark {
+    color: white;
+}
+
+.content__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.body {
+    .construction__btn {
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.body--dark {
+    .construction__btn {
+        color: white;
+    }
+
+    .construction__txt {
+        color: white;
+    }
+}

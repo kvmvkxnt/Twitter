@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import profile1 from '../../Assets/Images/profile.png';
 import profile2 from '../../Assets/Images/profile@2x.png';
+import nouser from '../../Assets/Images/noUserImage.webp';
 import user1 from '../../Assets/Images/profile-rounded.png';
 import user2 from '../../Assets/Images/profile-rounded@2x.png';
 import { Context as ThemeContext } from '../../Context/Theme/Theme';
@@ -28,7 +29,7 @@ function Profile({ username, name, imgSrc, tweets }) {
                             </svg>
                         </button>
                         <div className="profile__header__info">
-                            <h1 className="profile__header__name">Bobur</h1>
+                            <h1 className="profile__header__name">{name}</h1>
                             <p className="profile__header__amount">1,070 {languages[ctxLang.lang].main.profile.amount}</p>
                         </div>
                     </div>
@@ -55,11 +56,11 @@ function Profile({ username, name, imgSrc, tweets }) {
                 <img src={profile1} srcSet={`${profile1} 1x, ${profile2} 2x`} alt="Some logo" />
 
                 <div className="profile__info">
-                    <img src={user1} alt="user" srcSet={`${user1} 1x, ${user2} 2x`} className='profile__info__image' />
+                    <img src={imgSrc ? imgSrc : nouser} alt="user" srcSet={`${imgSrc ? imgSrc : nouser} 1x, ${imgSrc ? imgSrc : nouser} 2x`} className='profile__info__image' />
                     <button className="profile__info__edit">{languages[ctxLang.lang].main.profile.profile_info.edit}</button>
 
-                    <h2 className="profile__info__name">Bobur</h2>
-                    <p className="profile__info__username">@bobur_mavlonov</p>
+                    <h2 className="profile__info__name">{name}</h2>
+                    <p className="profile__info__username">{username}</p>
 
                     <p className="profile__info__desc">UX&UI designer at <a href='#link' className='desc_link'>@abutechuz</a></p>
 
@@ -81,7 +82,7 @@ function Profile({ username, name, imgSrc, tweets }) {
                                     <path d="M7.27 22.054C5.66 22.054 4.073 21.319 3.045 19.929C2.213 18.802 1.869 17.419 2.077 16.035C2.285 14.651 3.02 13.43 4.147 12.597L5.625 11.503C5.959 11.258 6.43 11.328 6.675 11.661C6.92 11.994 6.852 12.465 6.518 12.711L5.038 13.806C4.235 14.399 3.712 15.27 3.563 16.256C3.415 17.246 3.66 18.231 4.253 19.034C5.478 20.691 7.823 21.044 9.483 19.819L13.011 17.211C14.669 15.986 15.021 13.641 13.796 11.981C13.298 11.307 12.609 10.831 11.804 10.605C11.404 10.492 11.171 10.078 11.284 9.67798C11.396 9.27798 11.812 9.04798 12.21 9.15598C13.34 9.47398 14.306 10.142 15.004 11.088C16.721 13.412 16.228 16.7 13.904 18.418L10.374 21.026C9.441 21.719 8.351 22.052 7.269 22.052L7.27 22.054Z" fill="black" />
                                 </g>
                             </svg>
-                            t.me/boburjon_mavlonov
+                            t.me/{username}
                         </a>
 
                         <p className="profile__info__item">
@@ -134,9 +135,9 @@ function Profile({ username, name, imgSrc, tweets }) {
                 </ul>
 
                 <ul className="profile__tweets">
-                    <Tweet className='profile' name='Bobur' username='@bobur_mavlonov' time='Apr 1' imageSrc1={user1} imageSrc2={user2} pinned={true} tweet="4-kursni tugatgunimcha kamida bitta biznesim bo'lishini, uylanish uchun moddiy jihatdan to'la-to'kis tayyor bo'lishni, sog'lik va jismoniy holatni normallashtirishni reja qildim" />
-                    <Tweet className='profile' name='Bobur' username='@bobur_mavlonov' time='Apr 1' imageSrc1={user1} imageSrc2={user2} active1={true} active2={true} tweet={"Bizda shunaqa bir illat bor: gap bo'lsa bo'ldi, nima deyayotganimizga qarab ham o'tirmaymiz. Bitta biznes trener nito gapirib qo'ysa, hamma biznes trenerlar yomonga chiqadi slishkom aqlli odamlar nazdida. Gap faqat biznes trenerlar haqida emas."} />
-                    <Tweet className='profile' name='Bobur' username='@bobur_mavlonov' time='Apr 1' imageSrc1={user1} imageSrc2={user2} imageSrc3={tweet1} imageSrc4={tweet2} tweet="A bo'pti maskamasman" />
+                    {!tweets ? null : tweets.map((tweet) =>
+                        <Tweet name={tweet.name} username={tweet.username} tweet={tweet.text} />
+                    )}
                 </ul>
             </div>
         </div>
