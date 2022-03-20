@@ -1,0 +1,355 @@
+.body {
+    .profile {
+        max-width: 909px;
+        width: 100%;
+        transition: color 0.4s;
+
+        .profile__inner {
+            border-left: 1px solid #d8d8d8;
+            border-right: 1px solid #d8d8d8;
+            transition: border-left 0.4s, border-right 0.4s;
+
+            .profile__header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 22px 30px 15px 30px;
+                border-bottom: 1px solid #d8d8d8;
+                transition: border-bottom 0.4s;
+
+                .profile__header__heading {
+                    display: flex;
+                    align-items: center;
+
+                    .profile__header__button {
+                        padding: 0;
+                        border: none;
+                        width: 21px;
+                        height: 16px;
+                        background-color: transparent;
+                        cursor: pointer;
+
+                        svg {
+                            path {
+                                transition: fill 0.4s;
+                            }
+                        }
+                    }
+
+                    .profile__header__info {
+                        margin-left: 40px;
+
+                        .profile__header__name {
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 27px;
+                        }
+
+                        .profile__header__amount {
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 21px;
+                            opacity: 0.6;
+                        }
+                    }
+                }
+
+                &__select {
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    padding: 10px 0px;
+                    border-radius: 6px;
+                    transition: background-color 0.4s, color 0.4s, border 0.4s;
+                }
+
+                &__theme {
+                    padding: 0;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+
+                    svg {
+                        path {
+                            transition: fill 0.4s;
+                        }
+                    }
+                }
+            }
+
+            .profile__info {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                padding: 0 25px;
+                margin-bottom: 40px;
+
+                &__image {
+                    position: absolute;
+                    border: 5px solid #ffffff;
+                    width: 150px;
+                    height: 150px;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    transform: translate(25px, -50%);
+                    border-radius: 50%;
+                    transition: border 0.4s;
+                }
+
+                &__edit {
+                    align-self: flex-end;
+                    border: none;
+                    background-color: transparent;
+                    padding: 10px 15px;
+                    border: 1px solid rgba(0, 0, 0, 0.4);
+                    box-sizing: border-box;
+                    border-radius: 50px;
+                    margin-top: 20px;
+                    margin-bottom: 21px;
+                    cursor: pointer;
+                    transition: background-color 0.3s, color 0.3s, border 0.4s;
+
+                    &:hover {
+                        background-color: black;
+                        color: white;
+                        transition: background-color 0.3s, color 0.3s;
+                    }
+                }
+
+                &__name {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+
+                &__username {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 21px;
+                    opacity: 0.6;
+                    margin-bottom: 15px;
+                }
+
+                &__desc {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin-bottom: 15px;
+
+                    .desc_link {
+                        text-decoration: none;
+                        color: var(--comcolor);
+                    }
+                }
+
+                &__overview {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    column-gap: 15px;
+                    margin-bottom: 15px;
+
+                    .profile__info__item {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 5px;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: rgba(0, 0, 0, 0.6);
+                        transition: color 0.4s;
+
+                        svg {
+                            path {
+                                transition: fill 0.4s;
+                            }
+                        }
+                    }
+
+                    .profile__info__link {
+                        text-decoration: none;
+                        color: var(--comcolor);
+                    }
+                }
+
+                &__subs {
+                    display: flex;
+
+                    .profile__info__follows {
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: rgba(0, 0, 0, 0.6);
+                        transition: color 0.4s;
+
+                        .follow_amount {
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 24px;
+                            color: rgba(0, 0, 0, 1);
+                            transition: color 0.4s;
+                        }
+                    }
+
+                    .profile__info__follows + .profile__info__follows {
+                        margin-left: 30px;
+                    }
+                }
+            }
+
+            .profile__buttons {
+                display: flex;
+                padding: 0 50px;
+                margin: 0;
+                justify-content: space-between;
+                list-style-type: none;
+                border-bottom: 1px solid #d8d8d8;
+                transition: border-bottom 0.4s;
+
+                &__item {
+                    margin: 0;
+
+                    .profile__buttons__button {
+                        border: none;
+                        padding: 0;
+                        margin: 0;
+                        background-color: transparent;
+                        border-radius: 4px;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 24px;
+                        cursor: pointer;
+                        transition: color 0.4s;
+
+                        &.active {
+                            font-weight: 700;
+                            transition: 0.3s;
+
+                            &::after {
+                                width: 100%;
+                                background-color: var(--comcolor);
+                                height: 5px;
+                                border-radius: 4px;
+                                margin-top: 15px;
+                                display: block;
+                                content: "";
+                                transition: 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .profile__tweets {
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+            }
+        }
+    }
+}
+
+.body--dark {
+    .profile {
+        color: white;
+        transition: color 0.4s;
+
+        .profile__inner {
+            border-left: 1px solid rgba(255, 255, 255, 0.4);
+            border-right: 1px solid rgba(255, 255, 255, 0.4);
+            transition: border-left 0.4s, border-right 0.4s;
+
+            .profile__header {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+                transition: border-bottom 0.4s;
+
+                &__heading {
+                    .profile__header__button {
+                        svg {
+                            path {
+                                fill: white;
+                                transition: fill 0.4s;
+                            }
+                        }
+                    }
+                }
+
+                &__select {
+                    border: 1px solid rgba(255, 255, 255, 0.4);
+                    background-color: black;
+                    color: white;
+                    transition: border 0.4s, background-color 0.4s, color 0.4s;
+                }
+
+                &__theme {
+                    svg {
+                        path {
+                            fill: white;
+                            transition: fill 0.4s;
+                        }
+                    }
+                }
+            }
+
+            .profile__info {
+                &__image {
+                    border: 5px solid black;
+                    transition: border 0.4s;
+                }
+
+                &__edit {
+                    border: 1px solid rgba(255, 255, 255, 0.6);
+                    color: white;
+                    transition: border 0.4s, background-color 0.4s;
+
+                    &:hover {
+                        background-color: white;
+                        color: black;
+                    }
+                }
+
+                &__overview {
+                    .profile__info__item {
+                        color: rgba(255, 255, 255, 0.6);
+                        transition: fill 0.4s;
+
+                        svg {
+                            path {
+                                fill: white;
+                                transition: fill 0.4s;
+                            }
+                        }
+                    }
+
+                    .profile__info__link {
+                        color: var(--comcolor);
+                    }
+                }
+
+                &__subs {
+                    .profile__info__follows {
+                        color: rgba(255, 255, 255, 0.6);
+                        transition: color 0.4s;
+
+                        .follow_amount {
+                            color: white;
+                            transition: color 0.4s;
+                        }
+                    }
+                }
+            }
+
+            .profile__buttons {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+                transition: border-bottom 0.4s;
+
+                &__item {
+                    .profile__buttons__button {
+                        color: white;
+                        transition: color 0.4s;
+                    }
+                }
+            }
+        }
+    }
+}

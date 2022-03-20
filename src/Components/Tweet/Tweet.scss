@@ -1,99 +1,118 @@
 .tweet__item {
     padding: 10px 25px 20px 25px;
-    display: flex;
-    border-bottom: 1px solid #D8D8D8;
+    border-bottom: 1px solid #d8d8d8;
     // justify-content: space-between;
     width: 100%;
     transition: color 0.4s, border-bottom 0.4s;
 
-    .tweet__user {
-        max-width: 60px;
-        width: 100%;
+    .tweet__pin {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        color: #536471;
+        column-gap: 15px;
+        margin-bottom: 15px;
     }
 
-    .tweet__tweet-info {
-        margin-left: 15px;
+    .tweet__tweet {
+        display: flex;
 
-        &__user {
-            font-family: 'Segoe UI';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 24px;
-            color: rgba(0, 0, 0, 1);
-            text-decoration: none;
-            margin-bottom: 5px;
-            transition: color 0.4s;
+        .tweet__user {
+            max-width: 60px;
+            width: 100%;
+            border-radius: 50%;
 
-            .name {
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 27px;
+            img {
+                border-radius: 50%;
             }
         }
 
-        &__tweet {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 24px;
-            margin-bottom: 15px;
-        }
+        .tweet__tweet-info {
+            margin-left: 15px;
 
-        &__img {
-            border-radius: 20px;
-            margin-bottom: 22px;
-        }
+            &__user {
+                font-family: "Segoe UI";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 24px;
+                color: rgba(0, 0, 0, 1);
+                text-decoration: none;
+                margin-bottom: 5px;
+                transition: color 0.4s;
 
-        &__buttons {
-            display: flex;
-            justify-content: space-between;
+                .name {
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 27px;
+                }
+            }
 
-            .tweet__tweet-info__button {
-                border: none;
-                background-color: transparent;
+            &__tweet {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 15px;
+            }
+
+            &__img {
+                border-radius: 20px;
+                margin-bottom: 22px;
+            }
+
+            &__buttons {
                 display: flex;
-                align-items: center;
-                text-align: center;
-                padding: 5px;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: background-color 0.3s;
+                justify-content: space-between;
 
-                svg {
-                    path {
-                        transition: fill 0.4s;
+                .tweet__tweet-info__button {
+                    border: none;
+                    background-color: transparent;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    padding: 5px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                    svg {
+                        path {
+                            transition: fill 0.4s;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: #e3e1e1;
+                        transition: background-color 0.3s;
+                    }
+
+                    .tweet__tweet-info__number {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 21px;
+                        color: #536471;
+                        margin-left: 5px;
+                        transition: color 0.4s, opacity 0.4s;
                     }
                 }
-
-                &:hover {
-                    background-color: #e3e1e1;
-                    transition: background-color 0.3s;
-                }
-
-                .tweet__tweet-info__number {
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 21px;
-                    color: #536471;                    
-                    margin-left: 5px;
-                    transition: color 0.4s, opacity 0.4s;
-                }
             }
         }
-    }
 
-    .tweet__button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        align-self: flex-start;
-        margin-left: 10px;
-        opacity: 1;
-        transition: opacity 0.3s, color 0.4s;
+        .tweet__button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            align-self: flex-start;
+            margin-left: 10px;
+            opacity: 1;
+            transition: opacity 0.3s, color 0.4s;
 
-        &:hover {
-            opacity: 0.4;
-            transition: opacity 0.3s;
+            &:hover {
+                opacity: 0.4;
+                transition: opacity 0.3s;
+            }
         }
     }
 }

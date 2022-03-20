@@ -6,6 +6,18 @@ import user2_1 from '../../Assets/Images/shuhrat.png';
 import user2_2 from '../../Assets/Images/shuhrat@2x.png';
 import languages from '../../Localization/languages';
 import { Context as LangContext } from '../../Context/Language/Language';
+import tweet1_1 from '../../Assets/Images/tweet1.png';
+import tweet1_2 from '../../Assets/Images/tweet1@2x.png';
+import tweet2_1 from '../../Assets/Images/tweet2.png';
+import tweet2_2 from '../../Assets/Images/tweet2@2x.png';
+import tweet3_1 from '../../Assets/Images/tweet3.png';
+import tweet3_2 from '../../Assets/Images/tweet3@2x.png';
+import tweet4_1 from '../../Assets/Images/tweet4.png';
+import tweet4_2 from '../../Assets/Images/tweet4@2x.png';
+import tweet5_1 from '../../Assets/Images/tweet5.png';
+import tweet5_2 from '../../Assets/Images/tweet5@2x.png';
+import tweet6_1 from '../../Assets/Images/tweet6.png';
+import tweet6_2 from '../../Assets/Images/tweet6@2x.png';
 
 function Recomendations() {
     const ctxLang = React.useContext(LangContext);
@@ -27,6 +39,27 @@ function Recomendations() {
                     </button>
                     <input type="text" className="recs__search__input" placeholder={languages[ctxLang.lang].main.recs.input} />
                 </form>
+
+                <ul className="recs__tweets">
+                    <li className="recs__tweets__item">
+                        <img src={tweet1_1} srcSet={`${tweet1_1} 1x, ${tweet1_2} 2x`} alt="something" />
+                    </li>
+                    <li className="recs__tweets__item">
+                        <img src={tweet2_1} srcSet={`${tweet2_1} 1x, ${tweet2_2} 2x`} alt="something" />
+                    </li>
+                    <li className="recs__tweets__item">
+                        <img src={tweet3_1} srcSet={`${tweet3_1} 1x, ${tweet3_2} 2x`} alt="something" />
+                    </li>
+                    <li className="recs__tweets__item">
+                        <img src={tweet4_1} srcSet={`${tweet4_1} 1x, ${tweet4_2} 2x`} alt="something" />
+                    </li>
+                    <li className="recs__tweets__item">
+                        <img src={tweet5_1} srcSet={`${tweet5_1} 1x, ${tweet5_2} 2x`} alt="something" />
+                    </li>
+                    <li className="recs__tweets__item">
+                        <img src={tweet5_1} srcSet={`${tweet6_1} 1x, ${tweet6_2} 2x`} alt="something" />
+                    </li>
+                </ul>
 
                 <div className="recs__trends">
                     <div className="recs__trends__heading">

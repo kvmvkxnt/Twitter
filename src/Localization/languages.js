@@ -16,7 +16,7 @@ const languages = {
                 opt1: 'Light',
                 opt2: 'Dark'
             },
-            
+
             side_menu: {
                 logo_alt: 'Twitter Logo',
 
@@ -30,6 +30,24 @@ const languages = {
                 more: 'More',
 
                 tweet: 'Tweet',
+            },
+
+            profile: {
+                amount: 'tweets',
+
+                profile_info: {
+                    edit: "Edit profile",
+                    join: "Joined",
+                    following: "Following",
+                    followers: "Followers",
+                },
+
+                profile_buttons: {
+                    tweets: 'Tweets',
+                    replies: 'Tweets & Replies',
+                    media: 'Media',
+                    likes: 'Likes'
+                }
             },
 
             feed: {
@@ -76,6 +94,10 @@ const languages = {
                     ads: 'Ads Info',
                     more: 'More',
                 }
+            },
+
+            tweet: {
+                pin: 'Pinned Tweet',
             }
         }
     },
@@ -111,6 +133,24 @@ const languages = {
                 more: 'Больше',
 
                 tweet: 'Твитнуть',
+            },
+
+            profile: {
+                amount: 'твитов',
+
+                profile_info: {
+                    edit: "Измениь профиль",
+                    join: "Присоеденился",
+                    following: "Подписок",
+                    followers: "Подписчиков",
+                },
+
+                profile_buttons: {
+                    tweets: 'Твиты',
+                    replies: 'Твиты и Ответы',
+                    media: 'Медиа',
+                    likes: 'Лайки'
+                }
             },
 
             feed: {
@@ -157,6 +197,10 @@ const languages = {
                     ads: 'Информация о рекламе',
                     more: 'Больше',
                 }
+            },
+
+            tweet: {
+                pin: 'Закреплёный твит',
             }
         }
     },
@@ -192,6 +236,24 @@ const languages = {
                 more: 'Profil',
 
                 tweet: 'Twitlash',
+            },
+
+            profile: {
+                amount: 'tvit',
+
+                profile_info: {
+                    edit: "Profilni o'zgartirish",
+                    join: "Qo'shilgan",
+                    following: "Izlayapti",
+                    followers: "Izdosh",
+                },
+
+                profile_buttons: {
+                    tweets: 'Tvitlar',
+                    replies: 'Tvitlar & Javoblar',
+                    media: 'Media',
+                    likes: 'Layklar'
+                }
             },
 
             feed: {
@@ -238,6 +300,10 @@ const languages = {
                     ads: "E'lonlar haqida ma'lumot",
                     more: "Ko'proq",
                 }
+            },
+
+            tweet: {
+                pin: 'Qattiqlangan Tvit',
             }
         }
     }

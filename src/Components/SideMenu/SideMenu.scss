@@ -33,12 +33,24 @@
                         border: none;
                         padding: 0;
                         background-color: transparent;
+                        color: black;
+                        text-decoration: none;
                         font-weight: 600;
                         cursor: pointer;
                         transition: color 0.4s;
 
+                        i {
+                            transition: color 0.4s;
+                        }
+
                         &.active {
                             font-weight: 700;
+
+                            .side-menu__desc {
+                                &::after {
+                                    width: 100%;
+                                }
+                            }
                         }
 
                         .side-menu__desc {
@@ -46,7 +58,7 @@
                             transition: color 0.4s;
 
                             &::after {
-                                content: '';
+                                content: "";
                                 width: 0;
                                 height: 1px;
                                 display: block;
@@ -83,7 +95,6 @@
                 .side-menu__item + .side-menu__item {
                     margin-top: 30px;
                 }
-
             }
             .side-menu__profile {
                 display: flex;
@@ -160,7 +171,7 @@
                 transition: width 0.3s, background-color 0.4s;
             }
 
-            .side-menu__button {
+            .side-menu__button i {
                 color: white;
                 transition: color 0.4s;
             }
