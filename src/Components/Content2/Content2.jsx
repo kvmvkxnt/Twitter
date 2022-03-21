@@ -13,7 +13,7 @@ import { useParams } from 'react-router-dom';
 
 function Content2() {
     const { user_id } = useParams();
-    const defaultUser = {
+    const [user, setUser] = React.useState({
         username: '@bobur_mavlonov',
         newName: 'Bobur',
         pr: user1,
@@ -39,13 +39,37 @@ function Content2() {
                 img2: tweet2,
             }
         ]
-    }
-
-    const [user, setUser] = React.useState(defaultUser);
+    });
 
     React.useEffect(() => {
         if (user_id === '1234') {
-            setUser(defaultUser);
+            setUser({
+                username: '@bobur_mavlonov',
+                newName: 'Bobur',
+                pr: user1,
+                pr2: user2,
+                prof: prof,
+                prof2: prof2,
+                tweets: [
+                    {
+                        pin: true,
+                        time: 'Apr 1',
+                        text: "4-kursni tugatgunimcha kamida bitta biznesim bo'lishini, uylanish uchun moddiy jihatdan to'la-to'kis tayyor bo'lishni, sog'lik va jismoniy holatni normallashtirishni reja qildim",
+                    },
+                    {
+                        time: 'Apr 1',
+                        text: "Bizda shunaqa bir illat bor: gap bo'lsa bo'ldi, nima deyayotganimizga qarab ham o'tirmaymiz. Bitta biznes trener nito gapirib qo'ysa, hamma biznes trenerlar yomonga chiqadi slishkom aqlli odamlar nazdida. Gap faqat biznes trenerlar haqida emas.",
+                        reply: true,
+                        like: true,
+                    },
+                    {
+                        time: 'Apr 1',
+                        text: "A bo'pti maskamasman",
+                        img: tweet1,
+                        img2: tweet2,
+                    }
+                ]
+            });
         }
     }, [user_id]);
 
