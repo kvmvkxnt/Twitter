@@ -7,7 +7,8 @@ import Loading from '../Lib/Load/Loading';
 
 function Lists() {
     const [page, setPage] = React.useState(1);
-    const [users, setUsers] = React.useState([]);
+    const [users, setUsers] = React.useState();
+    const [loading, setLoading] = React.useState(true);
     const navigate = useNavigate();
     const ctxTheme = React.useContext(ThemeContext);
 
@@ -16,6 +17,7 @@ function Lists() {
             const res = await fetch('https://reqres.in/api/users?page=' + page);
             const data = await res.json();
             if (data?.data) {
+                setLoading(false);
                 setUsers(data.data);
             }
         })();
@@ -46,27 +48,30 @@ function Lists() {
                 </div>
 
                 <div className="lists__users">
-                    <ul className="lists__list">
-                        {users ? users.map((user) => <Link key={user.id} to={`/profile/${user.id}`} className='lists__link'>
-                            <li className="lists__item">
-                                <img src={user.avatar} alt="placeholder" className='lists__img' />
-                                <p className="lists__par">{user.first_name} {user.last_name}</p>
-                            </li>
-                        </Link>) : <Loading />}
-                    </ul>
+                    {users && <>
+                        <ul className="lists__list">
+                            {users.map((user) => <Link key={user.id} to={`/profile/${user.id}`} className='lists__link'>
+                                <li className="lists__item">
+                                    <img src={user.avatar} alt="placeholder" className='lists__img' />
+                                    <p className="lists__par">{user.first_name} {user.last_name}</p>
+                                </li>
+                            </Link>)}
+                        </ul>
 
-                    <div className="lists__buttons" onClick={(evt) => {
-                        if (evt.target.matches('.lists__page')) {
-                            setPage(evt.target.dataset.pageId)
-                        }
-                    }}>
-                        <button className="lists__page" data-page-id="1">
-                            1
-                        </button>
-                        <button className="lists__page" data-page-id="2">
-                            2
-                        </button>
-                    </div>
+                        <div className="lists__buttons" onClick={(evt) => {
+                            if (evt.target.matches('.lists__page')) {
+                                setPage(evt.target.dataset.pageId)
+                            }
+                        }}>
+                            <button className="lists__page" data-page-id="1">
+                                1
+                            </button>
+                            <button className="lists__page" data-page-id="2">
+                                2
+                            </button>
+                        </div>
+                    </>}
+                    {loading && <Loading />}
                 </div>
             </div>
         </div>

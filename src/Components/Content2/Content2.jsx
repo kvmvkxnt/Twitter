@@ -13,6 +13,7 @@ import { useParams } from 'react-router-dom';
 
 function Content2() {
     const { user_id } = useParams();
+
     const [user, setUser] = React.useState({
         username: '@bobur_mavlonov',
         newName: 'Bobur',
