@@ -55,7 +55,7 @@ function SideMenu() {
                         </NavLink>
                     </li>
                     <li className="side-menu__item">
-                        <NavLink to='/profile' className="side-menu__button">
+                        <NavLink to='/profile/1234' className="side-menu__button">
                             <MenuIcons icon='profile' />
                             <p className="side-menu__desc">{languages[ctxLang.lang].main.side_menu.profile}</p>
                         </NavLink>
@@ -72,12 +72,12 @@ function SideMenu() {
                 </ul>
 
                 <div className="side-menu__profile">
-                    <a href="#link2" className="side-menu__profile__link">
+                    <Link to='/profile/1234' className="side-menu__profile__link">
                         <img src={user1} alt="User1" srcSet={`${user1} 1x, ${user2} 2x`} />
-                    </a>
+                    </Link>
                     <div className="side-menu__profile__description">
-                        <a href='#link' className="side-menu__profile__name">Bobur</a>
-                        <a href='#link' className="side-menu__profile__username">@bobur_mavlonov</a>
+                        <Link to='/profile/1234' className="side-menu__profile__name">Bobur</Link>
+                        <Link to='/profile/1234' className="side-menu__profile__username">@bobur_mavlonov</Link>
                     </div>
                     <button className="side-menu__profile__out" onClick={() => {
                         ctxToken.setToken(null);

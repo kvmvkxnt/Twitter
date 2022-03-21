@@ -18,15 +18,54 @@
         padding: 0;
         border: none;
         cursor: pointer;
+
+        svg {
+            path {
+                transition: fill 0.4s;
+            }
+        }
+    }
+
+    .construction__theme {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        svg {
+            path {
+                transition: fill 0.4s;
+            }
+        }
+    }
+
+    .construction__txt {
+        transition: color 0.4s;
     }
 }
 
 .body--dark {
     .construction__btn {
         color: white;
+
+        svg {
+            path {
+                fill: white;
+                transition: 0.4s;
+            }
+        }
+    }
+
+    .construction__theme {
+        svg {
+            path {
+                fill: white;
+                transition: fill 0.4s;
+            }
+        }
     }
 
     .construction__txt {
         color: white;
+        transition: color 0.4s;
     }
 }

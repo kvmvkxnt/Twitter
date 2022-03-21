@@ -16,7 +16,7 @@ function Tweet({ className, name, username, time, tweet, imageSrc1, imageSrc2, i
             </svg> {languages[ctxLang.lang].main.tweet.pin}</p> : null}
             <div className="tweet__tweet">
                 <a href="#link" className={`tweet__user ${className}__user`}>
-                    <img src={imageSrc1} srcSet={`${imageSrc1} 1x, ${imageSrc2} 2x`} alt="User" />
+                    <img src={imageSrc1 ? imageSrc1 : userImage} srcSet={`${imageSrc1 ? imageSrc1 : userImage} 1x, ${imageSrc2 ? imageSrc2 : imageSrc1 ? imageSrc1 : userImage} 2x`} alt="User" />
                 </a>
 
                 <div className={`tweet__tweet-info ${className}__tweet-info`}>
@@ -72,8 +72,6 @@ Tweet.propTypes = {
 }
 
 Tweet.defaultProps = {
-    imageSrc1: userImage,
-    imageSrc2: userImage,
     active1: false,
     acitve2: false,
     pinned: false,

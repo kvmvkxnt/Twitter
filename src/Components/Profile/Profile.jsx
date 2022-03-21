@@ -1,29 +1,27 @@
 import './Profile.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
-import profile1 from '../../Assets/Images/profile.png';
-import profile2 from '../../Assets/Images/profile@2x.png';
 import nouser from '../../Assets/Images/noUserImage.webp';
-// import user1 from '../../Assets/Images/profile-rounded.png';
-// import user2 from '../../Assets/Images/profile-rounded@2x.png';
 import { Context as ThemeContext } from '../../Context/Theme/Theme';
 import { Context as LangContext } from '../../Context/Language/Language';
 import Stars from '../Lib/Icons/Stars';
 import Tweet from '../Tweet/Tweet';
-// import tweet1 from '../../Assets/Images/usertweet.png';
-// import tweet2 from '../../Assets/Images/usertweet@2x.png';
 import languages from '../../Localization/languages';
+import { useNavigate } from 'react-router-dom';
 
-function Profile({ username, name, imgSrc, tweets }) {
+function Profile({ username, name, imgSrc, imgSrc2, pr1, pr2, tweets }) {
     const ctxTheme = React.useContext(ThemeContext);
     const ctxLang = React.useContext(LangContext);
+    const navigate = useNavigate();
 
     return (
         <div className='profile'>
             <div className="profile__inner">
                 <div className="profile__header">
                     <div className="profile__header__heading">
-                        <button className='profile__header__button'>
+                        <button className='profile__header__button' onClick={() => {
+                            navigate(-1);
+                        }}>
                             <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.292892 7.2929C-0.0976315 7.68342 -0.0976314 8.31658 0.292893 8.70711L6.65686 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538409 7.04738 0.538409 6.65685 0.928933L0.292892 7.2929ZM21 7L1 7L1 9L21 9L21 7Z" fill="black" />
                             </svg>
@@ -53,10 +51,10 @@ function Profile({ username, name, imgSrc, tweets }) {
                     </button>
                 </div>
 
-                <img src={profile1} srcSet={`${profile1} 1x, ${profile2} 2x`} alt="Some logo" />
+                {imgSrc ? <img src={imgSrc} srcSet={`${imgSrc} 1x, ${imgSrc2 ? imgSrc2 : imgSrc} 2x`} alt="Some logo" /> : null}
 
-                <div className="profile__info">
-                    <img src={imgSrc ? imgSrc : nouser} alt="user" srcSet={`${imgSrc ? imgSrc : nouser} 1x, ${imgSrc ? imgSrc : nouser} 2x`} className='profile__info__image' />
+                <div className="profile__info" style={!imgSrc ? { marginTop: "90px" } : null}>
+                    <img src={pr1 ? pr1 : nouser} alt="user" srcSet={`${pr1 ? pr1 : nouser} 1x, ${pr2 ? pr2 : pr1 ? pr1 : nouser} 2x`} className='profile__info__image' />
                     <button className="profile__info__edit">{languages[ctxLang.lang].main.profile.profile_info.edit}</button>
 
                     <h2 className="profile__info__name">{name}</h2>
@@ -119,7 +117,25 @@ function Profile({ username, name, imgSrc, tweets }) {
                     </div>
                 </div>
 
-                <ul className="profile__buttons" >
+                <ul className="profile__buttons" onClick={(evt) => {
+                    console.log(evt.target);
+                    if (evt.target.matches('.profile__buttons__button')) {
+                        if (evt.target.className === 'profile__buttons__button active') {
+                            return;
+                        } else {
+                            const list = evt.target.parentNode.parentNode;
+                            const allBtns = list.querySelectorAll('.profile__buttons__button');
+
+                            for (var i = 0; i < allBtns.length; i++) {
+                                if (allBtns[i].className === 'profile__buttons__button active') {
+                                    allBtns[i].classList.remove('active');
+                                }
+                            }
+
+                            evt.target.classList.add('active');
+                        }
+                    }
+                }}>
                     <li className="profile__buttons__item">
                         <button className="profile__buttons__button active">{languages[ctxLang.lang].main.profile.profile_buttons.tweets}</button>
                     </li>
@@ -136,11 +152,11 @@ function Profile({ username, name, imgSrc, tweets }) {
 
                 <ul className="profile__tweets">
                     {!tweets ? null : tweets.map((tweet) =>
-                        <Tweet name={tweet.name} username={tweet.username} tweet={tweet.text} />
+                        <Tweet className='profile' time={tweet.time} imageSrc1={pr1} imageSrc2={pr2} name={name} username={username} tweet={tweet.text} imageSrc3={tweet.img ? tweet.img : null} imageSrc4={tweet.img2 ? tweet.img2 : tweet.img ? tweet.img : null} active1={tweet.reply} active2={tweet.like} pinned={tweet.pin} />
                     )}
                 </ul>
             </div>
-        </div>
+        </div >
     )
 }
 

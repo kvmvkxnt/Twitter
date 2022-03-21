@@ -45,7 +45,10 @@ function Feed() {
                 <div className="feed__tweet">
                     <img src={user1} alt="User1" className='feed__user' srcSet={`${user1} 1x, ${user2} 2x`} />
                     <form className="feed__form">
-                        <textarea type="text" className="feed__input" placeholder={languages[ctxLang.lang].main.feed.form.input} rows={1} />
+                        <textarea type="text" className="feed__input" placeholder={languages[ctxLang.lang].main.feed.form.input} rows={1} onInput={(evt) => {
+                            evt.target.style.height = 'auto';
+                            evt.target.style.height = evt.target.scrollHeight + 'px';
+                        }} />
                         <div className="feed__buttons">
                             <TweetButton type='image' />
                             <TweetButton type='gif' />
