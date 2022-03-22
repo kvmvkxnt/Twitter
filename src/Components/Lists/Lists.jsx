@@ -2,6 +2,7 @@ import React from 'react';
 import './Lists.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import { Context as ThemeContext } from '../../Context/Theme/Theme';
+import { Context as LangContext } from '../../Context/Language/Language';
 import Stars from '../Lib/Icons/Stars';
 import Loading from '../Lib/Load/Loading';
 
@@ -9,6 +10,7 @@ function Lists() {
     const [page, setPage] = React.useState(1);
     const [users, setUsers] = React.useState();
     const [loading, setLoading] = React.useState(true);
+    const ctxLang = React.useContext(LangContext);
     const navigate = useNavigate();
     const ctxTheme = React.useContext(ThemeContext);
 
@@ -34,6 +36,14 @@ function Lists() {
                             <path d="M0.292892 7.2929C-0.0976315 7.68342 -0.0976314 8.31658 0.292893 8.70711L6.65686 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928933C7.68054 0.538409 7.04738 0.538409 6.65685 0.928933L0.292892 7.2929ZM21 7L1 7L1 9L21 9L21 7Z" fill="black" />
                         </svg>
                     </button>
+
+                    <select className="lists__select" defaultValue={ctxLang.lang} onChange={(evt) => {
+                        ctxLang.setLang(evt.target.value);
+                    }}>
+                        <option value="eng">ENG</option>
+                        <option value="rus">RUS</option>
+                        <option value="uzb">UZB</option>
+                    </select>
 
                     <button className='lists__theme' onClick={() => {
                         if (ctxTheme.theme === 'dark') {

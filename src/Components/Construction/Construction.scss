@@ -13,59 +13,86 @@
 }
 
 .body {
-    .construction__btn {
-        background-color: transparent;
-        padding: 0;
-        border: none;
-        cursor: pointer;
+    .construction {
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
 
-        svg {
-            path {
-                transition: fill 0.4s;
+            .construction__btn {
+                background-color: transparent;
+                padding: 0;
+                border: none;
+                cursor: pointer;
+
+                svg {
+                    path {
+                        transition: fill 0.4s;
+                    }
+                }
+            }
+
+            .construction__select {
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                padding: 10px 0px;
+                border-radius: 6px;
+                transition: background-color 0.4s, color 0.4s, border 0.4s;
+            }
+
+            .construction__theme {
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+
+                svg {
+                    path {
+                        transition: fill 0.4s;
+                    }
+                }
             }
         }
-    }
 
-    .construction__theme {
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-
-        svg {
-            path {
-                transition: fill 0.4s;
-            }
+        .construction__txt {
+            transition: color 0.4s;
         }
-    }
-
-    .construction__txt {
-        transition: color 0.4s;
     }
 }
 
 .body--dark {
-    .construction__btn {
-        color: white;
+    .construction {
+        .header {
+            .construction__btn {
+                color: white;
 
-        svg {
-            path {
-                fill: white;
-                transition: 0.4s;
+                svg {
+                    path {
+                        fill: white;
+                        transition: 0.4s;
+                    }
+                }
+            }
+
+            .construction__select {
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                background-color: black;
+                color: white;
+                transition: border 0.4s, background-color 0.4s, color 0.4s;
+            }
+
+            .construction__theme {
+                svg {
+                    path {
+                        fill: white;
+                        transition: fill 0.4s;
+                    }
+                }
             }
         }
-    }
 
-    .construction__theme {
-        svg {
-            path {
-                fill: white;
-                transition: fill 0.4s;
-            }
+        .construction__txt {
+            color: white;
+            transition: color 0.4s;
         }
-    }
-
-    .construction__txt {
-        color: white;
-        transition: color 0.4s;
     }
 }

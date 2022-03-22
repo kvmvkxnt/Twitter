@@ -16,6 +16,7 @@
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
+                margin-bottom: 30px;
 
                 .lists__back {
                     border: none;
@@ -28,6 +29,13 @@
                             transition: fill 0.4s;
                         }
                     }
+                }
+
+                .lists__select {
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    padding: 10px 0px;
+                    border-radius: 6px;
+                    transition: background-color 0.4s, color 0.4s, border 0.4s;
                 }
 
                 .lists__theme {
@@ -128,6 +136,13 @@
                             transition: fill 0.4s;
                         }
                     }
+                }
+
+                .lists__select {
+                    border: 1px solid rgba(255, 255, 255, 0.4);
+                    background-color: black;
+                    color: white;
+                    transition: border 0.4s, background-color 0.4s, color 0.4s;
                 }
 
                 .lists__theme {

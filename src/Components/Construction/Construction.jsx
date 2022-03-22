@@ -45,6 +45,14 @@ function Construction({ site }) {
                             Exit
                         </button>
 
+                        <select className="construction__select" defaultValue={ctxLang.lang} onChange={(evt) => {
+                            ctxLang.setLang(evt.target.value);
+                        }}>
+                            <option value="eng">ENG</option>
+                            <option value="rus">RUS</option>
+                            <option value="uzb">UZB</option>
+                        </select>
+
                         <button className='construction__theme' onClick={() => {
                             if (ctxTheme.theme === 'dark') {
                                 ctxTheme.setTheme('light')
