@@ -114,7 +114,32 @@ function Recomendations({ active }) {
                 <div className="recs__subs">
                     <h3 className="recs__subs__title">{languages[ctxLang.lang].main.recs.subs.heading}</h3>
 
-                    <ul className="recs__subs__list">
+                    <ul className="recs__subs__list" onClick={(evt) => {
+                        const clicked = evt.target;
+
+                        if (clicked.matches('.recs__subs__button')) {
+                            const id = Number(clicked.dataset.btnId);
+
+                            if (id === 1) {
+                                if (clicked.matches('.active')) {
+                                    clicked.classList.remove('active');
+                                    clicked.textContent = languages[ctxLang.lang].main.recs.subs.button;
+
+                                } else {
+                                    clicked.classList.add('active');
+                                    clicked.textContent = languages[ctxLang.lang].main.recs.subs.button_success;
+                                }
+                            } else {
+                                if (clicked.matches('.active')) {
+                                    clicked.classList.remove('active');
+                                    clicked.textContent = languages[ctxLang.lang].main.recs.subs.button;
+                                } else {
+                                    clicked.classList.add('active');
+                                    clicked.textContent = languages[ctxLang.lang].main.recs.subs.button_success;
+                                }
+                            }
+                        }
+                    }}>
                         <li className="recs__subs__item">
                             <div className="recs__subs__info">
                                 <img src={user1_1} srcSet={`${user1_1} 1x, ${user1_2} 2x`} className='recs__subs__img' alt="some pic" />
@@ -123,7 +148,7 @@ function Recomendations({ active }) {
                                     <p className="recs__subs__username">@Mushtar565266</p>
                                 </a>
                             </div>
-                            <button className="recs__subs__button">{languages[ctxLang.lang].main.recs.subs.button}</button>
+                            <button className="recs__subs__button" data-btn-id='1'>{languages[ctxLang.lang].main.recs.subs.button}</button>
                         </li>
                         <li className="recs__subs__item">
                             <div className="recs__subs__info">
@@ -133,7 +158,7 @@ function Recomendations({ active }) {
                                     <p className="recs__subs__username">@Mushtar565266</p>
                                 </a>
                             </div>
-                            <button className="recs__subs__button">{languages[ctxLang.lang].main.recs.subs.button}</button>
+                            <button className="recs__subs__button" data-btn-id='2'>{languages[ctxLang.lang].main.recs.subs.button}</button>
                         </li>
                     </ul>
 

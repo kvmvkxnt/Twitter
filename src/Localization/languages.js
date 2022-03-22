@@ -83,6 +83,7 @@ const languages = {
                     heading: 'You might like',
 
                     button: 'Follow',
+                    button_success: `Following`,
 
                     more: 'Show more',
                 },
@@ -187,6 +188,7 @@ const languages = {
                     heading: 'Вам могут понравиться',
 
                     button: 'Подписаться',
+                    button_success: 'Подписан',
 
                     more: 'Больше',
                 },
@@ -291,6 +293,7 @@ const languages = {
                     heading: 'Sizga yoqishi mumkin',
 
                     button: 'Kuzatish',
+                    button_success: 'Kuzatmoqda',
 
                     more: "Ko'proq",
                 },

@@ -93,7 +93,6 @@ function Feed() {
                 </div>
                 <ul className="feed__list" onClick={(evt) => {
                     const clicked = evt.target;
-                    console.log(editabletweets);
 
                     if (clicked.matches('.tweet__tweet-info__button')) {
                         if (clicked.matches('.comments')) {
@@ -178,9 +177,9 @@ function Feed() {
                     }
                 }}>
 
-                    <Tweet className='feed' key={tweets[0].id} tweetId={tweets[0].id} active1={tweets[0].reply} active2={tweets[0].like} name='Designta' pinned={true} username='@inner' time='25m' imageSrc1={user1_1} imageSrc2={user1_2} tweet={languages[ctxLang.lang].main.feed.tweets.tweet1} />
-                    <Tweet className='feed' key={tweets[1].id} tweetId={tweets[1].id} active1={tweets[1].reply} active2={tweets[1].like} name='cloutexhibition' username='@cloutexhibition' time='22m' imageSrc1={user2_1} imageSrc2={user2_2} tweet={languages[ctxLang.lang].main.feed.tweets.tweet2} />
-                    <Tweet className='feed' key={tweets[2].id} tweetId={tweets[2].id} active1={tweets[2].reply} active2={tweets[2].like} name='CreativePhoto' username='@RajLahoti' time='1h' imageSrc1={user3_1} imageSrc2={user3_2} imageSrc3={user3_3} imageSrc4={user3_4} tweet={languages[ctxLang.lang].main.feed.tweets.tweet3} />
+                    <Tweet className='feed' key={editabletweets[0].id} tweetId={editabletweets[0].id} active1={editabletweets[0].reply} active2={editabletweets[0].like} name='Designta' pinned={true} username='@inner' time='25m' imageSrc1={user1_1} imageSrc2={user1_2} tweet={languages[ctxLang.lang].main.feed.tweets.tweet1} />
+                    <Tweet className='feed' key={editabletweets[1].id} tweetId={editabletweets[1].id} active1={editabletweets[1].reply} active2={editabletweets[1].like} name='cloutexhibition' username='@cloutexhibition' time='22m' imageSrc1={user2_1} imageSrc2={user2_2} tweet={languages[ctxLang.lang].main.feed.tweets.tweet2} />
+                    <Tweet className='feed' key={editabletweets[2].id} tweetId={editabletweets[2].id} active1={editabletweets[2].reply} active2={editabletweets[2].like} name='CreativePhoto' username='@RajLahoti' time='1h' imageSrc1={user3_1} imageSrc2={user3_2} imageSrc3={user3_3} imageSrc4={user3_4} tweet={languages[ctxLang.lang].main.feed.tweets.tweet3} />
                 </ul>
             </div>
         </div >

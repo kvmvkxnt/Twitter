@@ -9,7 +9,7 @@ import Tweet from '../Tweet/Tweet';
 import languages from '../../Localization/languages';
 import { useNavigate } from 'react-router-dom';
 
-function Profile({ username, name, imgSrc, imgSrc2, pr1, pr2, tweets }) {
+function Profile({ username, name, imgSrc, imgSrc2, pr1, pr2, tweets, editActive = false }) {
     const ctxTheme = React.useContext(ThemeContext);
     const ctxLang = React.useContext(LangContext);
     const navigate = useNavigate();
@@ -68,7 +68,7 @@ function Profile({ username, name, imgSrc, imgSrc2, pr1, pr2, tweets }) {
 
                 <div className="profile__info" style={!imgSrc ? { marginTop: "90px" } : null}>
                     <img src={pr1 ? pr1 : nouser} alt="user" srcSet={`${pr1 ? pr1 : nouser} 1x, ${pr2 ? pr2 : pr1 ? pr1 : nouser} 2x`} className='profile__info__image' />
-                    <button className="profile__info__edit">{languages[ctxLang.lang].main.profile.profile_info.edit}</button>
+                    <button className="profile__info__edit" style={editActive ? null : { visibility: "hidden" }}>{languages[ctxLang.lang].main.profile.profile_info.edit}</button>
 
                     <h2 className="profile__info__name">{name}</h2>
                     <p className="profile__info__username">{username}</p>
@@ -262,6 +262,7 @@ Profile.propTypes = {
     name: PropTypes.string.isRequired,
     imgSrc: PropTypes.string,
     tweets: PropTypes.array.isRequired,
+    editActive: PropTypes.bool,
 }
 
 export default Profile;

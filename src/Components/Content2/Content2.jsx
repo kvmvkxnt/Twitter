@@ -22,6 +22,7 @@ function Content2() {
         if (user_id === '1234') {
             setLoading(false);
             setUser({
+                id: 1234,
                 username: '@bobur_mavlonov',
                 newName: 'Bobur',
                 pr: user1,
@@ -78,7 +79,7 @@ function Content2() {
                 <div className="content__inner">
                     <SideMenu />
                     {loading && <Loading />}
-                    {user && <Profile username={user.username} name={user.newName} pr1={user.pr} pr2={user.pr2 ? user.pr2 : user.pr1} imgSrc={user.prof} imgSrc2={user.prof2 ? user.prof2 : user.prof} tweets={user.tweets} />}
+                    {user && <Profile editActive={user.id === 1234 ? true : false} username={user.username} name={user.newName} pr1={user.pr} pr2={user.pr2 ? user.pr2 : user.pr1} imgSrc={user.prof} imgSrc2={user.prof2 ? user.prof2 : user.prof} tweets={user.tweets} />}
                     <Recomendations active={true} />
                 </div>
             </div>
