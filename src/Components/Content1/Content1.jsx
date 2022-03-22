@@ -6,6 +6,9 @@ import Recomendations from '../Recomendations/Recomendations';
 
 
 function Content1() {
+    React.useEffect(() => {
+        document.title = 'Twitter';
+    })
     return (
         <div className='content'>
             <div className="container">

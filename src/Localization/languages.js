@@ -101,7 +101,17 @@ const languages = {
             tweet: {
                 pin: 'Pinned Tweet',
             }
-        }
+        },
+
+        userTweets: {
+            tweet1: 'By the end of the 4th year, I planned to have at least one business, to be fully financially ready for marriage, to normalize my health and physical condition.',
+            tweet2: "We have a flaw: we don't even sit down and look at what we're saying. If one business coach speaks nito, all business coaches will be bad in the eyes of slishkom smart people. It’s not just about business coaches.",
+            tweet3: "Ok, I'm not a mask",
+        },
+
+        log_in: 'Log in to Twitter',
+        construct_message1: 'Page ',
+        construct_message2: ' is under construction',
     },
 
     rus: {
@@ -206,7 +216,17 @@ const languages = {
             tweet: {
                 pin: 'Закреплёный твит',
             }
-        }
+        },
+
+        userTweets: {
+            tweet1: 'К концу 4-го курса я планировал иметь хотя бы одно дело, быть полностью финансово готовым к замужеству, нормализовать свое здоровье и физическое состояние.',
+            tweet2: 'У нас есть недостаток: мы даже не садимся и не смотрим на то, что говорим. Если один бизнес-тренер говорит нито, все бизнес-тренеры будут плохими в глазах слишком умных людей. Это касается не только бизнес-тренеров.',
+            tweet3: 'Ладно, я не маска',
+        },
+
+        log_in: 'Войдите в Твиттер',
+        construct_message1: 'Страница ',
+        construct_message2: ' ещё в разработке',
     },
 
     uzb: {
@@ -311,7 +331,17 @@ const languages = {
             tweet: {
                 pin: 'Qattiqlangan Tvit',
             }
-        }
+        },
+
+        userTweets: {
+            tweet1: "4-kursni tugatgunimcha kamida bitta biznesim bo'lishini, uylanish uchun moddiy jihatdan to'la-to'kis tayyor bo'lishni, sog'lik va jismoniy holatni normallashtirishni reja qildim.",
+            tweet2: "Bizda shunaqa bir illat bor: gap bo'lsa bo'ldi, nima deyayotganimizga qarab ham o'tirmaymiz. Bitta biznes trener nito gapirib qo'ysa, hamma biznes trenerlar yomonga chiqadi slishkom aqlli odamlar nazdida. Gap faqat biznes trenerlar haqida emas.",
+            tweet3: "A bo'pti maskamasman.",
+        },
+
+        log_in: 'Twitterga kiring',
+        construct_message1: '',
+        construct_message2: ' sahifa qurilmoqda',
     }
 }
 

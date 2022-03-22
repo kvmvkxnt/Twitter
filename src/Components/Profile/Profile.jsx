@@ -15,6 +15,10 @@ function Profile({ username, name, imgSrc, imgSrc2, pr1, pr2, tweets, editActive
     const navigate = useNavigate();
     const [editabletweets, setTweets] = React.useState(tweets);
 
+    React.useEffect(() => {
+        document.title = `${name} (${username})`;
+    })
+
     function notActive(clicked) {
         const amount = Number(clicked.querySelector('.tweet__tweet-info__number').textContent);
         clicked.querySelector('.tweet__tweet-info__number').textContent = amount - 1;
@@ -261,7 +265,7 @@ Profile.propTypes = {
     username: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     imgSrc: PropTypes.string,
-    tweets: PropTypes.array.isRequired,
+    tweets: PropTypes.array,
     editActive: PropTypes.bool,
 }
 

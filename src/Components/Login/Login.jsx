@@ -12,6 +12,10 @@ function Login() {
     const ctxTheme = React.useContext(ThemeContext);
     const ctxToken = React.useContext(TokenContext);
 
+    React.useEffect(() => {
+        document.title = languages[ctxLang.lang].log_in;
+    })
+
     async function handleSubmit(evt) {
         evt.preventDefault();
 

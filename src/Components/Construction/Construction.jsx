@@ -5,10 +5,31 @@ import Recomendations from '../Recomendations/Recomendations';
 import { useNavigate } from 'react-router-dom';
 import Stars from '../Lib/Icons/Stars';
 import { Context as ThemeContext } from '../../Context/Theme/Theme';
+import languages from '../../Localization/languages';
+import { Context as LangContext } from '../../Context/Language/Language';
 
 function Construction({ site }) {
     const navigate = useNavigate();
     const ctxTheme = React.useContext(ThemeContext);
+    const ctxLang = React.useContext(LangContext);
+
+    React.useEffect(() => {
+        if (site === 'Explore') {
+            document.title = languages[ctxLang.lang].main.side_menu.explore;
+        }
+        if (site === 'Notifications') {
+            document.title = languages[ctxLang.lang].main.side_menu.notify;
+        }
+        if (site === 'Messages') {
+            document.title = languages[ctxLang.lang].main.side_menu.chat;
+        }
+        if (site === 'Bookmarks') {
+            document.title = languages[ctxLang.lang].main.side_menu.books;
+        }
+        if (site === 'More') {
+            document.title = languages[ctxLang.lang].main.side_menu.more;
+        }
+    })
     return (<div className='content'>
         <div className="container">
             <div className="content__inner">
@@ -34,7 +55,7 @@ function Construction({ site }) {
                             <Stars />
                         </button>
                     </div>
-                    <p className="construction__txt" style={{ fontWeight: "700", fontSize: "30px" }}>{site} page is under construction. Please, be patient</p>
+                    <p className="construction__txt" style={{ fontWeight: "700", fontSize: "30px" }}>{languages[ctxLang.lang].construct_message1}{`"${site === 'Explore' ? languages[ctxLang.lang].main.side_menu.explore : site === 'Notifications' ? languages[ctxLang.lang].main.side_menu.notify : site === 'Messages' ? languages[ctxLang.lang].main.side_menu.chat : site === 'Bookmarks' ? languages[ctxLang.lang].main.side_menu.books : languages[ctxLang.lang].main.side_menu.more}"`}{languages[ctxLang.lang].construct_message2}</p>
                 </div>
                 <Recomendations />
             </div>
