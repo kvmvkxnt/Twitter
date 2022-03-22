@@ -13,6 +13,19 @@ function Profile({ username, name, imgSrc, imgSrc2, pr1, pr2, tweets }) {
     const ctxTheme = React.useContext(ThemeContext);
     const ctxLang = React.useContext(LangContext);
     const navigate = useNavigate();
+    const [editabletweets, setTweets] = React.useState(tweets);
+
+    function notActive(clicked) {
+        const amount = Number(clicked.querySelector('.tweet__tweet-info__number').textContent);
+        clicked.querySelector('.tweet__tweet-info__number').textContent = amount - 1;
+        clicked.classList.remove('active');
+    }
+
+    function beActive(clicked) {
+        const amount = Number(clicked.querySelector('.tweet__tweet-info__number').textContent);
+        clicked.querySelector('.tweet__tweet-info__number').textContent = amount + 1;
+        clicked.classList.add('active');
+    }
 
     return (
         <div className='profile'>
@@ -150,9 +163,93 @@ function Profile({ username, name, imgSrc, imgSrc2, pr1, pr2, tweets }) {
                     </li>
                 </ul>
 
-                <ul className="profile__tweets">
+                <ul className="profile__tweets" onClick={(evt) => {
+                    const clicked = evt.target;
+
+                    if (clicked.matches('.tweet__tweet-info__button')) {
+                        if (clicked.matches('.comments')) {
+                            if (clicked.matches('.active')) {
+                                notActive(clicked);
+                            } else {
+                                beActive(clicked);
+                            }
+                        }
+
+                        if (clicked.matches('.retweet')) {
+                            if (clicked.matches('.active')) {
+                                notActive(clicked);
+                                const newTweets = [...editabletweets];
+                                const editTweet = newTweets.find((tweet) => tweet.id === Number(clicked.dataset.tweetId));
+                                editTweet.reply = false;
+                                setTweets(newTweets);
+                            } else {
+                                beActive(clicked);
+                                const newTweets = [...editabletweets];
+                                const editTweet = newTweets.find((tweet) => tweet.id === Number(clicked.dataset.tweetId));
+                                editTweet.reply = true;
+                                setTweets(newTweets);
+                            }
+                        }
+
+                        if (clicked.matches('.likes')) {
+                            if (clicked.matches('.active')) {
+                                notActive(clicked);
+                                const newTweets = [...editabletweets];
+                                const editTweet = newTweets.find((tweet) => tweet.id === Number(clicked.dataset.tweetId));
+                                editTweet.like = false;
+                                setTweets(newTweets);
+                            } else {
+                                beActive(clicked);
+                                const newTweets = [...editabletweets];
+                                const editTweet = newTweets.find((tweet) => tweet.id === Number(clicked.dataset.tweetId));
+                                editTweet.like = true;
+                                setTweets(newTweets);
+                            }
+                        }
+                    } else if (clicked.matches('svg') || clicked.matches('.tweet__tweet-info__number')) {
+                        if (clicked.parentNode.matches('.comments')) {
+                            if (clicked.parentNode.matches('.active')) {
+                                notActive(clicked.parentNode);
+                            } else {
+                                beActive(clicked.parentNode);
+                            }
+                        }
+
+                        if (clicked.parentNode.matches('.retweet')) {
+                            if (clicked.parentNode.matches('.active')) {
+                                notActive(clicked.parentNode);
+                                const newTweets = [...editabletweets];
+                                const editTweet = newTweets.find((tweet) => tweet.id === Number(clicked.parentNode.dataset.tweetId));
+                                editTweet.reply = false;
+                                setTweets(newTweets);
+                            } else {
+                                beActive(clicked.parentNode);
+                                const newTweets = [...editabletweets];
+                                const editTweet = newTweets.find((tweet) => tweet.id === Number(clicked.parentNode.dataset.tweetId));
+                                editTweet.reply = true;
+                                setTweets(newTweets);
+                            }
+                        }
+
+                        if (clicked.parentNode.matches('.likes')) {
+                            if (clicked.parentNode.matches('.active')) {
+                                notActive(clicked.parentNode);
+                                const newTweets = [...editabletweets];
+                                const editTweet = newTweets.find((tweet) => tweet.id === Number(clicked.parentNode.dataset.tweetId));
+                                editTweet.like = false;
+                                setTweets(newTweets);
+                            } else {
+                                beActive(clicked.parentNode);
+                                const newTweets = [...editabletweets];
+                                const editTweet = newTweets.find((tweet) => tweet.id === Number(clicked.parentNode.dataset.tweetId));
+                                editTweet.like = true;
+                                setTweets(newTweets);
+                            }
+                        }
+                    }
+                }}>
                     {!tweets ? null : tweets.map((tweet) =>
-                        <Tweet className='profile' time={tweet.time} imageSrc1={pr1} imageSrc2={pr2} name={name} username={username} tweet={tweet.text} imageSrc3={tweet.img ? tweet.img : null} imageSrc4={tweet.img2 ? tweet.img2 : tweet.img ? tweet.img : null} active1={tweet.reply} active2={tweet.like} pinned={tweet.pin} />
+                        <Tweet key={tweet.id} className='profile' time={tweet.time} imageSrc1={pr1} imageSrc2={pr2} name={name} username={username} tweet={tweet.text} imageSrc3={tweet.img ? tweet.img : null} imageSrc4={tweet.img2 ? tweet.img2 : tweet.img ? tweet.img : null} active1={tweet.reply} active2={tweet.like} pinned={tweet.pin} tweetId={tweet.id} />
                     )}
                 </ul>
             </div>
@@ -164,7 +261,7 @@ Profile.propTypes = {
     username: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     imgSrc: PropTypes.string,
-    tweets: PropTypes.object.isRequired,
+    tweets: PropTypes.array.isRequired,
 }
 
 export default Profile;

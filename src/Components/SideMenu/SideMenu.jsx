@@ -67,7 +67,7 @@ function SideMenu() {
                         </NavLink>
                     </li>
                     <li className="side-menu__item">
-                        <button className='side-menu__tweet'>{languages[ctxLang.lang].main.side_menu.tweet}</button>
+                        <Link to='/' className='side-menu__tweet'>{languages[ctxLang.lang].main.side_menu.tweet}</Link>
                     </li>
                 </ul>
 

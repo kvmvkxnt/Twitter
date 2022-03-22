@@ -30,21 +30,28 @@ function Content2() {
                 prof2: prof2,
                 tweets: [
                     {
+                        id: 0,
                         pin: true,
                         time: 'Apr 1',
                         text: "4-kursni tugatgunimcha kamida bitta biznesim bo'lishini, uylanish uchun moddiy jihatdan to'la-to'kis tayyor bo'lishni, sog'lik va jismoniy holatni normallashtirishni reja qildim",
+                        reply: false,
+                        like: false,
                     },
                     {
+                        id: 1,
                         time: 'Apr 1',
                         text: "Bizda shunaqa bir illat bor: gap bo'lsa bo'ldi, nima deyayotganimizga qarab ham o'tirmaymiz. Bitta biznes trener nito gapirib qo'ysa, hamma biznes trenerlar yomonga chiqadi slishkom aqlli odamlar nazdida. Gap faqat biznes trenerlar haqida emas.",
-                        reply: true,
-                        like: true,
+                        reply: false,
+                        like: false,
                     },
                     {
+                        id: 2,
                         time: 'Apr 1',
                         text: "A bo'pti maskamasman",
                         img: tweet1,
                         img2: tweet2,
+                        reply: false,
+                        like: false,
                     }
                 ]
             });
