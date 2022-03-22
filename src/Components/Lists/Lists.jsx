@@ -60,7 +60,8 @@ function Lists() {
 
                         <div className="lists__buttons" onClick={(evt) => {
                             if (evt.target.matches('.lists__page')) {
-                                setPage(evt.target.dataset.pageId)
+                                setPage(evt.target.dataset.pageId);
+                                setLoading(true);
                             }
                         }}>
                             <button className="lists__page" data-page-id="1">
