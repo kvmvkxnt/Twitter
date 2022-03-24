@@ -6,6 +6,7 @@ import { Context as LangContext } from '../../Context/Language/Language';
 import { Context as ThemeContext } from '../../Context/Theme/Theme';
 import { findElement } from '../../utils';
 import { Context as TokenContext } from '../../Context/Token/Token';
+import { Link } from 'react-router-dom'
 
 function Login() {
     const ctxLang = React.useContext(LangContext);
@@ -51,9 +52,9 @@ function Login() {
                 <div className="login__inner">
                     <form className='login__form' onSubmit={handleSubmit}>
                         <div className="login__section">
-                            <a href="./index.html" className="login__link">
+                            <Link to="/" className="login__link">
                                 <Logo className='login__img' alt={languages[ctxLang.lang].main.login.alt} />
-                            </a>
+                            </Link>
 
                             <select className='login__select' defaultValue={ctxLang.lang} onChange={(evt) => {
                                 ctxLang.setLang(evt.target.value);
@@ -86,7 +87,7 @@ function Login() {
 
                         <div className="login__links">
                             <a href="#link" className="login__link">{languages[ctxLang.lang].main.login.links.link1}</a>
-                            <a href="#link" className='login__link'>{languages[ctxLang.lang].main.login.links.link2}</a>
+                            <Link to="/register" className='login__link'>{languages[ctxLang.lang].main.login.links.link2}</Link>
                         </div>
                     </form>
                 </div>

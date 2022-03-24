@@ -100,6 +100,36 @@ const languages = {
 
             tweet: {
                 pin: 'Pinned Tweet',
+            },
+
+            sign_up: {
+                heading: 'Create an account',
+                placeholder1: 'Name',
+                placeholder2_1: 'Phone number',
+                placeholder2_2: 'Email',
+                change1: 'Use email',
+                change2: 'Use phone number',
+                date: 'Date of birth',
+                text: "Now he wants a lot of easy cushions, he's pregnant and he loves to sit on the couch. Who can drink before the boat is fear, but a great skirt For the lion will be born with hatred or need to start. That's the price of the bears, the most exciting pull of the earth. Please log in to the annoyance. Homework",
+                select1: 'Month',
+                select2: 'Day',
+                select3: 'Year',
+                button: 'Next',
+                select1_data: {
+                    jan: 'January',
+                    feb: 'February',
+                    mar: 'March',
+                    apr: 'April',
+                    may: 'May',
+                    jun: 'June',
+                    jul: 'July',
+                    aug: 'August',
+                    sep: 'September',
+                    oct: 'October',
+                    nov: 'November',
+                    dec: 'December',
+                },
+                err_nodata: 'Not all data is entered',
             }
         },
 
@@ -215,6 +245,36 @@ const languages = {
 
             tweet: {
                 pin: 'Закреплёный твит',
+            },
+
+            sign_up: {
+                heading: 'Создайте аккаунт',
+                placeholder1: 'Имя',
+                placeholder2_1: 'Номер телефона',
+                placeholder2_2: 'Эл. почта',
+                change1: 'Использовать эл. почту',
+                change2: 'Использовать номер телефона',
+                date: 'Дата рождения',
+                text: "Теперь он хочет много легких подушек, он беременен и любит сидеть на диване. Кто может выпить перед лодкой, это страх, но отличная юбка Ибо лев родится с ненавистью или нужно начинать. Такова цена медведей, самого захватывающего притяжения земли. Пожалуйста, войдите в систему. Домашнее задание",
+                select1: 'Месяц',
+                select2: 'День',
+                select3: 'Год',
+                button: 'Следующее',
+                select1_data: {
+                    jan: 'Январь',
+                    feb: 'Февраль',
+                    mar: 'Март',
+                    apr: 'Апрель',
+                    may: 'Май',
+                    jun: 'Июнь',
+                    jul: 'Июль',
+                    aug: 'Август',
+                    sep: 'Сентябрь',
+                    oct: 'Октябрь',
+                    nov: 'Ноябрь',
+                    dec: 'Декабрь',
+                },
+                err_nodata: "Введены не все данные",
             }
         },
 
@@ -330,6 +390,36 @@ const languages = {
 
             tweet: {
                 pin: 'Qattiqlangan Tvit',
+            },
+
+            sign_up: {
+                heading: 'Akkaunt yarating',
+                placeholder1: 'Ism',
+                placeholder2_1: 'Tel. raqami',
+                placeholder2_2: 'Elektron pochta',
+                change1: 'Eletron pochtani ishlatish',
+                change2: 'Tel. raqamni ishlatish',
+                date: "Tug'ilgan kun",
+                text: "Endi u juda ko'p oson yostiqlarni xohlaydi, u homilador va divanda o'tirishni yaxshi ko'radi. Qayiqdan oldin kim ichishi mumkin - qo'rquv, lekin ajoyib yubka Chunki sher nafrat bilan tug'iladi yoki boshlash kerak. Bu ayiqlarning narxi, yerning eng hayajonli tortishishi. Iltimos, bezovtalanish uchun tizimga kiring. Uy vazifasi",
+                select1: 'Oy',
+                select2: 'Kun',
+                select3: 'Yil',
+                button: 'Keyingi',
+                select1_data: {
+                    jan: 'Yanvar',
+                    feb: 'Fevral',
+                    mar: 'Mart',
+                    apr: 'Aprel',
+                    may: 'May',
+                    jun: 'Iyun',
+                    jul: 'Iyul',
+                    aug: 'Avgust',
+                    sep: 'Sentabr',
+                    oct: 'Oktabr',
+                    nov: 'Noyabr',
+                    dec: 'Dekabr',
+                },
+                err_nodata: "Barcha ma'lumotlar kiritilmagan",
             }
         },
 

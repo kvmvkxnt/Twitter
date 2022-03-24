@@ -12,31 +12,31 @@
                 flex-direction: column;
                 max-width: 450px;
                 width: 100%;
-    
+
                 .login__section {
                     margin-bottom: 36px;
                     display: flex;
                     justify-content: space-between;
-    
+
                     span {
                         display: flex;
                         align-items: center;
                         column-gap: 10px;
                     }
-    
+
                     .login__select {
                         border: 1px solid rgba(0, 0, 0, 0.2);
-                        padding: 0 10px;
+                        padding: 5px 10px;
                         border-radius: 6px;
                         transition: background-color 0.4s, color 0.4s, border 0.4s;
                     }
-    
+
                     .login__switch {
                         position: relative;
                         display: inline-block;
                         width: 72px;
                         height: 41px;
-    
+
                         .login__check {
                             position: absolute;
                             cursor: pointer;
@@ -47,7 +47,7 @@
                             background-color: gray;
                             transition: 0.4s;
                             border-radius: 34px;
-    
+
                             &::before {
                                 position: absolute;
                                 content: "";
@@ -60,21 +60,21 @@
                                 transition: 0.4s;
                             }
                         }
-    
+
                         .login__checkbox:checked + .login__check {
                             background-color: var(--comcolor);
                         }
-    
+
                         .login__checkbox:focus + .login__check {
                             box-shadow: 0 0 1px var(--comcolor);
                         }
-    
+
                         .login__checkbox:checked + .login__check::before {
                             transform: translateX(30px);
                         }
                     }
                 }
-    
+
                 .login__heading {
                     font-family: "Roboto";
                     font-style: normal;
@@ -83,7 +83,7 @@
                     line-height: 49px;
                     margin-bottom: 36px;
                 }
-    
+
                 .login__input {
                     margin-bottom: 25px;
                     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -91,7 +91,7 @@
                     padding: 23px 20px;
                     transition: background-color 0.4s, color 0.4s, border 0.4s;
                 }
-    
+
                 .login__button {
                     text-align: center;
                     padding: 18px 0;
@@ -103,26 +103,26 @@
                     cursor: pointer;
                     margin-bottom: 40px;
                     transition: background-color 0.4s;
-    
+
                     &:hover {
                         background-color: rgb(88, 173, 252);
                         transition: background-color 0.4s;
                     }
                 }
-    
+
                 .login__error {
                     color: red;
                 }
-    
+
                 .login__links {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-    
+
                     .login__link {
                         text-decoration: none;
                         color: var(--comcolor);
-    
+
                         &:hover {
                             text-decoration: underline;
                         }
@@ -146,7 +146,7 @@
                     border: 1px solid rgba(255, 255, 255, 0.2);
                     transition: background-color 0.4s, color 0.4s, border 0.4s;
                 }
-    
+
                 .login__section {
                     .login__select {
                         background-color: black;

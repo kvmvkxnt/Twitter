@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from '../Login/Login';
+import Unauth from '../../Unauth';
 import { Context as TokenContext } from '../../Context/Token/Token';
 import AuthApp from '../../Auth';
 
@@ -9,7 +9,7 @@ function Main() {
     if (ctxToken.token) {
         return <AuthApp />
     } else {
-        return <Login />
+        return <Unauth />
     }
 }
 

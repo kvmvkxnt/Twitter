@@ -1,0 +1,256 @@
+.body {
+    .sign {
+        margin-top: 30px;
+
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .sign__form {
+                display: flex;
+                flex-direction: column;
+                max-width: 670px;
+                width: 100%;
+
+                .sign__link {
+                    margin-bottom: 43px;
+                    align-self: center;
+                }
+
+                .sign__controls {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 25px;
+
+                    &__back {
+                        padding: 0;
+                        border: none;
+                        width: 21px;
+                        height: 16px;
+                        background-color: transparent;
+                        cursor: pointer;
+
+                        svg {
+                            path {
+                                transition: fill 0.4s;
+                            }
+                        }
+                    }
+
+                    &__select {
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        padding: 5px 10px;
+                        border-radius: 6px;
+                        transition: background-color 0.4s, color 0.4s, border 0.4s;
+                    }
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 10px;
+
+                        .sign__switch {
+                            position: relative;
+                            display: inline-block;
+                            width: 72px;
+                            height: 41px;
+
+                            .sign__check {
+                                position: absolute;
+                                cursor: pointer;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                background-color: gray;
+                                transition: 0.4s;
+                                border-radius: 34px;
+
+                                &::before {
+                                    position: absolute;
+                                    content: "";
+                                    height: 32px;
+                                    width: 32px;
+                                    left: 5px;
+                                    bottom: 5px;
+                                    background-color: white;
+                                    border-radius: 50%;
+                                    transition: 0.4s;
+                                }
+                            }
+
+                            .sign__checkbox:checked + .sign__check {
+                                background-color: var(--comcolor);
+                            }
+
+                            .sign__checkbox:focus + .sign__check {
+                                box-shadow: 0 0 1px var(--comcolor);
+                            }
+
+                            .sign__checkbox:checked + .sign__check::before {
+                                transform: translateX(30px);
+                            }
+                        }
+                    }
+                }
+
+                .sign__heading {
+                    font-weight: 700;
+                    font-size: 30px;
+                    line-height: 40px;
+                    margin-bottom: 35px;
+                }
+
+                .sign__input {
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    border-radius: 6px;
+                    padding: 23px 20px;
+                    margin-bottom: 25px;
+                    transition: background-color 0.4s, color 0.4s, border 0.4s;
+
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                }
+
+                .sign__input:nth-child(2) {
+                    margin-bottom: 30px;
+                }
+
+                .sign__button {
+                    border: none;
+                    background-color: transparent;
+                    padding: 0;
+                    max-width: fit-content;
+                    color: var(--comcolor);
+                    cursor: pointer;
+                    margin-bottom: 40px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .sign__title {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin-bottom: 10px;
+                }
+
+                .sign__desc {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: rgba(0, 0, 0, 0.6);
+                    margin-bottom: 20px;
+                    transition: color 0.4s;
+                }
+
+                .sign__selects {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    column-gap: 10px;
+                    margin-bottom: 64px;
+
+                    &__select {
+                        padding: 23px 20px;
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        border-radius: 6px;
+                        max-width: 159px;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 24px;
+                        width: 100%;
+                        color: rgba(0, 0, 0, 0.6);
+                        transition: color 0.4s, border 0.4s, background-color 0.4s;
+                    }
+
+                    &__select:first-child {
+                        max-width: 312px;
+                    }
+                }
+
+                .sign__error {
+                    color: red;
+                    margin-bottom: 10px;
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+
+                .sign__submit {
+                    background-color: #1da1f2;
+                    border: none;
+                    padding: 18px 0;
+                    color: white;
+                    border-radius: 76px;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 24px;
+                    cursor: pointer;
+                    transition: background-color 0.4s;
+
+                    &:hover {
+                        background-color: rgb(77, 169, 255);
+                        transition: background-color 0.4s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.body--dark {
+    .sign {
+        &__inner {
+            .sign__form {
+                .sign__controls {
+                    &__back {
+                        svg {
+                            path {
+                                fill: white;
+                                transition: fill 0.4s;
+                            }
+                        }
+                    }
+
+                    &__select {
+                        border: 1px solid rgba(255, 255, 255, 0.4);
+                        background-color: black;
+                        color: white;
+                        transition: color 0.4s, border 0.4s, background-color 0.4s;
+                    }
+                }
+
+                .sign__input {
+                    background-color: black;
+                    color: white;
+                    border: 1px solid rgba(255, 255, 255, 0.4);
+                    transition: color 0.4s, border 0.4s, background-color 0.4s;
+                }
+
+                .sign__desc {
+                    color: rgba(255, 255, 255, 0.4);
+                    transition: color 0.4s;
+                }
+
+                .sign__selects {
+                    &__select {
+                        background-color: black;
+                        color: white;
+                        border: 1px solid rgba(255, 255, 255, 0.4);
+                        transition: color 0.4s, border 0.4s, background-color 0.4s;
+                    }
+                }
+            }
+        }
+    }
+}
