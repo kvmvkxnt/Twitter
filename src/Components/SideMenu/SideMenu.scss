@@ -247,3 +247,19 @@
         }
     }
 }
+
+@media only screen and (max-width: 837px) {
+    .body {
+        .side-menu {
+            display: none;
+            min-width: 276px;
+            width: 0;
+            transition: 0.3s;
+
+            &--active {
+                width: 100%;
+                transition: 0.3s;
+            }
+        }
+    }
+}

@@ -17,10 +17,29 @@
                 border-bottom: 1px solid #d8d8d8;
                 transition: border-bottom 0.4s;
 
-                .feed__title {
-                    font-weight: 700;
-                    font-size: 24px;
-                    line-height: 32px;
+                .feed__controls {
+                    display: flex;
+                    column-gap: 10px;
+
+                    .feed__burger {
+                        border: none;
+                        background-color: transparent;
+                        width: 32px;
+                        height: 32px;
+                        padding: 0;
+                        display: none;
+
+                        svg {
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+
+                    .feed__title {
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 32px;
+                    }
                 }
 
                 .feed__select {
@@ -140,6 +159,22 @@
                         path {
                             fill: white;
                             transition: fill 0.4s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: 837px) {
+    .body {
+        .feed {
+            &__inner {
+                .feed__heading {
+                    .feed__controls {
+                        .feed__burger {
+                            display: block;
                         }
                     }
                 }

@@ -406,10 +406,16 @@
     }
 }
 
-@media only screen and (max-width: 817px) {
+@media only screen and(max-width: 837px) {
     .body {
         .recs {
-            display: none;
+            max-width: none;
+            margin-left: 0;
+
+            &__inner {
+                max-width: none;
+                position: static;
+            }
         }
     }
 }
